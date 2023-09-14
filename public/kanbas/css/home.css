@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: inline;
+    display: flex;
+}
+
+nav{
+    display: flex;
+    width: 25%;
+    justify-content: center;
+}
+
+.nav-one{
+    padding: 10px;
+    margin: 10px;
+    flex: 1 0.5 0;
+    display: flex;
+    justify-content: center;
+}
+
+.second-nav{
+    padding: 10px;
+    margin: 10px;
+    flex: 1 0.5 0;
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    display: flex;
+    flex: 1;
+    padding: 10px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#buttons{
+    margin-bottom: 10px;
+}
+
+#buttons li{
+    display: inline;
+    list-style-type: none;
+    margin: 10px;
+}
+
+#buttons button, #buttons select{
+    padding: 5px;
+}
+
+ul ul li{
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+aside{
+    width: 25%;
+}
+
+.butts{
+    margin: 10px 0 10px 0;
+}
+
+.side{
+    margin: 10px 0px 10px 20px; 
+}
+
+.calendar{
+    margin: 20px 0px;
+}
+
+h2{
+    margin: 20px 0;
+}
