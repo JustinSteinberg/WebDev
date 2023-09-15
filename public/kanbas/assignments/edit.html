@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Assignment Page</title>
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+    <div class="container">
+    <nav>
+        <div class="nav-one">
+            <ul>
+                <li>
+                    <a href="#">Account</a>
+                </li>
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">Calendar</a>
+                </li>
+                <li>
+                    <a href="#">Inbox</a>
+                </li>
+                <li>
+                    <a href="#">History</a>
+                </li>
+                <li>
+                    <a href="#">Studio</a>
+                </li>
+                <li>
+                    <a href="#">Commons</a>
+                </li>
+                <li>
+                    <a href="#">Help</a>
+                </li>
+            </ul>
+        </div>
+        <div class="second-nav">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Modules</a>
+                </li>
+                <li>
+                    <a href="#">Piazza</a>
+                </li>
+                <li>
+                    <a href="#">Zoom Meetings</a>
+                </li>
+                <li>
+                    <a href="#">Assignments</a>
+                </li>
+                <li>
+                    <a href="#">Quizzes</a>
+                </li>
+                <li>
+                    <a href="#">Grades</a>
+                </li>
+                <li>
+                    <a href="#">Panopto Video</a>
+                </li>
+                <li>
+                    <a href="#">Discussions</a>
+                </li>
+                <li>
+                    <a href="#">Announcements</a>
+                </li>
+                <li>
+                    <a href="#">Pages</a>
+                </li>
+                <li>
+                    <a href="#">Files</a>
+                </li>
+                <li>
+                    <a href="#">Rubrics</a>
+                </li>
+                <li>
+                    <a href="#">Outcomes</a>
+                </li>
+                <li>
+                    <a href="#">Collaborations</a>
+                </li>
+                <li>
+                    <a href="#">Syllabus</a>
+                </li>
+                <li>
+                    <a href="#">Settings</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main class="content"> 
+        <div class="assignments">
+            <select>
+                <option>Speed Grader</option>
+            </select>
+        </div>
+        <div id="assignments">
+            
+            <form>
+                <label for="assignment_name">Assignment Name</label>
+                <input type="text" name="assignment_name" placeholder="A1 - ENV + HTML">
+                <textarea name="description" placeholder="This is the assignment description."></textarea>
+                <label for="points">Points</label>
+                <input type="text" name="points" placeholder="100">
+                <label for="Assignment_Group">Assignment Group</label>
+                <select name="Assignment_Group">
+                    <option>
+                        ASSIGNMENTS
+                    </option>
+                </select>
+                <label for="Display_Grade">Display Grade as</label>
+                <select name="Display_Grade">
+                    <option>
+                        Percentage
+                    </option>
+                </select>
+                <label for="Sub_type">Submission Type</label>
+                <select name="Sub_Type">
+                    <option>
+                        Online
+                    </option>
+                </select>
+                <label for="Entry_Option">Online Entry Options</label>
+                <label for="text_entry">
+                    <input type="checkbox" name="Entry_Options" value="Text Entry">
+                    Text Entry
+                </label>
+                <label for="website_url">
+                    <input type="checkbox" name="Entry_Options" value="Website URL">
+                    Website URL
+                </label>
+                <label for="media_recordings">
+                    <input type="checkbox" name="Entry_Options" value="Media Recordings">
+                    Media Recordings
+                </label>
+                <label  for="student_annotation">
+                    <input type="checkbox" name="Entry_Options" value="Student Annotation">
+                    Student Annotation
+                </label>
+                <label  for="file_uploads">
+                    <input type="checkbox" name="Entry_Options" value="File Uploads">
+                    File Uploads
+                </label>
+                <label for="Submission_Attempts">Submission Attempts</label>
+                <select name="Submission_Attempts">
+                    <option>
+                        Unlimited
+                    </option>
+                </select>
+                <label for="Plagarism_Review">Plagarism Review</label>
+                <select name="Plagarism_Review">
+                    <option>
+                        None
+                    </option>
+                </select>
+                <label for="group_assignment">Group Assignment</label>
+                <label>
+                    <input type="checkbox" name="group_assignment" value="Group Assignment">
+                    This is a group assignment
+                </label>
+                <label for="peer_reviews">Peer Reviews</label>
+                <label>
+                    <input type="checkbox" name="peer_reviews" value="Peer Reviews">
+                    Require Peer Reviews
+                </label>
+                <label for="assign_to">Assign To</label>
+                <input type="text" name="assign_to" placeholder="Everyone">
+                <label for="Due">Due</label>
+                <input type="date" name="Due" value="2023-09-15">
+                <label for="Available">Available from</label>
+                <input type="date" name="Available" value="2023-09-15">
+                <label for="Until">Until</label>
+                <input type="date" name="Until" value="2023-09-15">
+                <div class="edit_submit">
+                    <button type="button">Cancel</button>
+                    <button type="button">Save</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    </div>
+</body>
+</html>

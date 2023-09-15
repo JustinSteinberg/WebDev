@@ -91,7 +91,7 @@ label{
     font-weight: bold;
 }
 
-form input{
+form input, form textarea, form select{
     margin: 10px 0;
 }
 
@@ -134,4 +134,14 @@ th, td{
 .edit_work select{
     margin: 10px 10px;
     height: 40px;
+}
+
+.edit_submit{
+    display: inline-flex;
+    justify-content: center;
+}
+
+
+.edit_submit button{
+   margin: 10px;
 }
