@@ -145,3 +145,42 @@ th, td{
 .edit_submit button{
    margin: 10px;
 }
+
+.profile_content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 10vh 90vh;
+}
+
+.profile_header{
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+    border-bottom: 1px solid gray;
+    display: flex;
+    align-items: center;
+}
+
+.profile_img{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    justify-self: center;
+    margin: 20px 10px;
+}
+
+.profile_info{
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    margin: 20px 10px;
+}
+
+.edit_butt{
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+    height: 30px;
+    width: 120px;
+    margin: 20px 10px;
+}
