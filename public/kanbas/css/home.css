@@ -184,3 +184,37 @@ th, td{
     width: 120px;
     margin: 20px 10px;
 }
+
+.link_labels{
+    margin: 20px 0px 0 0px;
+}
+
+.link_labels label{
+    margin: 20px 55px 20px 55px;
+    text-align: center;
+}
+
+.links{
+    display: block;
+}
+
+.add_link{
+    width: fit-content;
+    padding: 2px;
+}
+
+.profile_buttons{
+    margin: 20px 0;
+    display: flex;
+    justify-content: end;
+}
+.profile_buttons button{
+    margin: 5px;
+    width: 100px;
+    height: 50px;
+}
+
+.profile_buttons button:last-child{
+    color: white;
+    background-color: red;
+}
