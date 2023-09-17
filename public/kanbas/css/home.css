@@ -218,3 +218,29 @@ th, td{
     color: white;
     background-color: red;
 }
+
+.settings_nav li{
+    display: inline;
+}
+
+.form_group{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.course_details label{
+    margin: 10px 10px 10px 0px;
+}
+
+.course_details p{
+    margin: 0px 10px 10px 0px;
+}
+
+.course_details button{
+    align-self: end;
+    background-color: red;
+    color: white;
+    width: 200px;
+    height: 50px;
+}
