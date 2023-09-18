@@ -12,13 +12,13 @@
         <div class="nav-one">
             <ul>
                 <li>
-                    <a href="#">Account</a>
+                    <a href="../profile/index.html">Account</a>
                 </li>
                 <li>
                     <a href="#">Dashboard</a>
                 </li>
                 <li>
-                    <a href="#">Courses</a>
+                    <a href="../home.html">Courses</a>
                 </li>
                 <li>
                     <a href="#">Calendar</a>
@@ -111,13 +111,24 @@
             </div>
             <button class="add_link" type="button">Add another link</button>
             <div class="profile_buttons">
-                <button type="button">Cancel</button> 
-                <button type="button">Save Profile</button>
+                <button type="button" id="cancel">Cancel</button> 
+                <button type="button" id="save">Save Profile</button>
              </div>
             </form>
         </div>
-        <button class="edit_butt">Cancel Editing</button>
+        <button class="edit_butt" id="edit_link">Cancel Editing</button>
     </main>
     </div>
 </body>
+<script>
+    document.getElementById("edit_link").addEventListener('click', function(){
+        window.location.href = "../profile/index.html"
+    });
+    document.getElementById("save").addEventListener('click', function(){
+        window.location.href = "../profile/index.html"
+    });
+    document.getElementById("cancel").addEventListener('click', function(){
+        window.location.href = "../profile/index.html"
+    });
+</script>
 </html>

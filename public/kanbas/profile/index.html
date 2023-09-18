@@ -90,8 +90,13 @@
             <h2>Links</h2>
             <a href="#">Youtube</a>
         </div>
-        <button class="edit_butt">Edit Profile</button>
+        <button class="edit_butt" id="edit_link">Edit Profile</button>
     </main>
     </div>
 </body>
+<script>
+    document.getElementById("edit_link").addEventListener('click', function(){
+        window.location.href = "../profile/edit.html"
+    });
+</script>
 </html>
