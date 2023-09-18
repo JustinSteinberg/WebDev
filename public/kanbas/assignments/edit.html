@@ -183,12 +183,20 @@
                 <label for="Until">Until</label>
                 <input type="date" name="Until" value="2023-09-15">
                 <div class="edit_submit">
-                    <button type="button">Cancel</button>
-                    <button type="button">Save</button>
+                    <button type="button" id="cancel">Cancel</button>
+                    <button type="button" id="save">Save</button>
                 </div>
             </form>
         </div>
     </main>
     </div>
 </body>
+<script>
+    document.getElementById("cancel").addEventListener('click', function(){
+        window.location.href = "../assignments/index.html"
+    });
+    document.getElementById("save").addEventListener('click', function(){
+        window.location.href = "../assignments/index.html"
+    });
+</script>
 </html>
