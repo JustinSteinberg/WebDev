@@ -16,27 +16,49 @@
 .container{
     display: inline;
     display: flex;
+    height: 100vh;
+    width: 100vw;
 }
 
 nav{
     display: flex;
-    width: 25%;
+    width: 21%;
+    height: 100%;
     justify-content: center;
+    align-self: flex-start;
+}
+
+nav i{
+    margin: 20px;
 }
 
 .nav-one{
-    padding: 10px;
-    margin: 10px;
-    flex: 1 0.5 0;
+    flex: 1 1 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+}
+
+.nav-one ul{
+    list-style: none;
+    text-align: center;
+}
+
+.nav-one li{
+    padding: 7px;
+}
+
+.nav-one a{
+    text-decoration: none;
+    color: white
+}
+
+.kanbas-nav{
+    background-color: black;
+    height: 100%;
 }
 
 .second-nav{
-    padding: 10px;
-    margin: 10px;
-    flex: 1 0.5 0;
+    flex: 2 1 0;
     display: flex;
     justify-content: center;
 }
@@ -48,7 +70,6 @@ nav{
 .webdev{
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 100%;
     height: 100%;
 }
@@ -58,10 +79,67 @@ nav{
     flex: 1;
     padding: 10px;
     margin: 10px;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
+.dashboard{
+    position: fixed;
+    z-index: 2;
+    width: 7%;
+}
+
+.dash-board-content{
+    display: flex;
+    flex: 1;
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 110px;
+}
+
+.dash-board-content h1{
+    border-bottom: 1px solid black;
+}
+
+.originalPos{
+    transform: translateX(0);
+}
+
+.movedPos{
+    transform: translateX(220px);
+}
+
+.courses-nav{
+    position: fixed;
+    left: -120px;
+    transition: 0.3s ease;
+    width: 220px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+}
+
+.courses-nav ul{
+    list-style: none;
+}
+
+.courses-nav li, .courses-nav h2{
+    padding: 7px;
+}
+
+.courses-nav h2{
+    margin: 7px;
+    border-bottom: 1px solid gray;
+}
+
+.courses-nav a{
+    text-decoration: none;
+    color: red;
+}
+
 
 #buttons{
     margin-bottom: 10px;
@@ -305,5 +383,4 @@ th, td{
 #back_to_assignments{
     font-weight: bold;
     color: red;
-    margin: 20px;
 }
