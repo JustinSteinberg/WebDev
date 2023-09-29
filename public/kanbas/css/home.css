@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    line-height: 1;
+}
+
 .assignment_list{
     margin: 20px;
 }
@@ -13,7 +17,7 @@
 }
 
 
-.container{
+.my_container{
     display: inline;
     display: flex;
     height: 100vh;
@@ -36,6 +40,7 @@ nav i{
     flex: 1 1 0;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .nav-one ul{
@@ -55,6 +60,8 @@ nav i{
 .kanbas-nav{
     background-color: black;
     height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .second-nav{
@@ -83,10 +90,10 @@ nav i{
     flex-direction: column;
 }
 
-.dashboard{
+.my_dashboard{
     position: fixed;
-    z-index: 2;
-    width: 7%;
+    z-index: 3;
+    width: 100px;
 }
 
 .dash-board-content{
@@ -101,6 +108,32 @@ nav i{
 
 .dash-board-content h1{
     border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+.class_card{
+    width: 250px;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 20px 10px;
+    align-self: center;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    overflow-y: hidden;
+}
+
+.card-color{
+    width: 100%;
+    height: 50%;
+    background-color: lightblue;
+    border-radius: 5px 5px 0 0;
+}
+
+.card-description{
+    color: lightblue;
+    background-color: white;
+    padding: 5px;
+    border-top: 1px solid black;
 }
 
 .originalPos{
@@ -120,6 +153,7 @@ nav i{
     background-color: white;
     box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.2);
     padding: 5px;
+    z-index: 2;
 }
 
 .courses-nav ul{
@@ -383,4 +417,5 @@ th, td{
 #back_to_assignments{
     font-weight: bold;
     color: red;
+    font-size: 14px;
 }
