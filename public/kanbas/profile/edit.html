@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Profile Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -12,9 +13,9 @@
     <nav>
         <div class="nav-one">
             <ul class="kanbas-nav">
-                <li>
-                    <a href="../profile/index.html">
-                        <i class="fa-solid fa-user fa-2xl" style="color: red;"></i> <br>
+                <li style="background-color: white;">
+                    <a href="../profile/index.html" style="color: red">
+                        <i class="fa-solid fa-user fa-2xl" style="color: gray;"></i> <br>
                         Account</a>
                 </li>
                 <li>
@@ -64,83 +65,87 @@
             </ul>   
 
         </div>
-        <div class="second-nav">
-            <ul>
-                <li>
-                    <a href="#">Notification</a>
-                </li>
-                <li>
-                    <a href="#">Profile</a>
-                </li>
-                <li>
-                    <a href="#">Files</a>
-                </li>
-                <li>
-                    <a href="#">Settings</a>
-                </li>
-                <li>
-                    <a href="#">ePortfolios</a>
-                </li>
-                <li>
-                    <a href="#">Shared Content</a>
-                </li>
-                <li>
-                    <a href="#">The Hub</a>
-                </li>
-                <li>
-                    <a href="#">Qwickly Course Tools</a>
-                </li>
-                <li>
-                    <a href="#">Global Announcements</a>
-                </li>
-            </ul>
-        </div>
     </nav>
-    <main class="profile_content"> 
-        <div class="profile_header">
+    <main class="content"> 
+        <div class="page_header">
             <h3>Justin Steinberg's Profile</h3>
         </div>
-        <div class="profile_img">
-
-        </div>
-        <div class="profile_info">
-            <h1>Justin Steinberg</h1>
-            <form>
-            <label for="name">Name:</label>
-            <input type="text" name="name" id="name" placeholder="Justin Steinberg">
-            <label for="pronouns">Pronouns:</label>
-            <select name="pronouns" id="pronouns">
-                <option>
-                    None
-                </option>
-            </select>
-            <label for="title">Title:</label>
-            <input type="text" for="title" id="title">
-            <h2>Contact</h2>
-            <p>
-                No Registered services, you can add some on the settings page.
-            </p>
-            <h2>Biography</h2>
-            <p>Student, Software Put-togetherer, Skier, Rock Climber, Interested in HCI</p>
-            <textarea name="biography" id="biography" placeholder="Student, Software Put-togetherer, Skier, Rock Climber, Interested in HCI"></textarea>
-            <h2>Links</h2>
-            <a href="#">Youtube</a>
-            <div class="link_labels">
-                <label for="URL_Title">Title</label>
-                <label for="URL">URL</label>
+        <div class="sub-content">
+            <div class="second-nav">
+                <ul>
+                    <li>
+                        <a href="#">Notification</a>
+                    </li>
+                    <li style="border-left: 2px solid red">
+                        <a href="#">Profile</a>
+                    </li>
+                    <li>
+                        <a href="#">Files</a>
+                    </li>
+                    <li>
+                        <a href="#">Settings</a>
+                    </li>
+                    <li>
+                        <a href="#">ePortfolios</a>
+                    </li>
+                    <li>
+                        <a href="#">Shared Content</a>
+                    </li>
+                    <li>
+                        <a href="#">The Hub</a>
+                    </li>
+                    <li>
+                        <a href="#">Qwickly Course Tools</a>
+                    </li>
+                    <li>
+                        <a href="#">Global Announcements</a>
+                    </li>
+                </ul>
             </div>
-            <div class="links">
-                <input type="text" name="URL_Title" id="URL_Title"> -->
-                <input type="text" name="URL" id="URL">
+            <div class="profile_content">
+            <div class="profile_img">
+                <i class="fa-solid fa-user" style="color: gray;"></i>
             </div>
-            <button class="add_link" type="button">Add another link</button>
-            <div class="profile_buttons">
-                <button type="button" id="cancel">Cancel</button> 
-                <button type="button" id="save">Save Profile</button>
-             </div>
-            </form>
+                <div class="profile_info">
+                    <h2>Justin Steinberg</h2>
+                    <form>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Justin Steinberg">
+                    <label for="pronouns">Pronouns:</label>
+                    <select name="pronouns" id="pronouns">
+                        <option>
+                            None
+                        </option>
+                    </select>
+                    <label for="title">Title:</label>
+                    <input type="text" for="title" id="title">
+                    <h3>Contact</h3>
+                    <p>
+                        No Registered services, you can add some on the settings page.
+                    </p>
+                    <h3>Biography</h3>
+                    <p>Student, Software Put-togetherer, Skier, Rock Climber, Interested in HCI</p>
+                    <textarea name="biography" id="biography" placeholder="Student, Software Put-togetherer, Skier, Rock Climber, Interested in HCI"></textarea>
+                    <h3>Links</h3>
+                    <a href="#">Youtube</a>
+                    <div class="link_labels">
+                        <label for="URL_Title">Title</label>
+                        <label for="URL">URL</label>
+                    </div>
+                    <div class="links">
+                        <input type="text" name="URL_Title" id="URL_Title"> -->
+                        <input type="text" name="URL" id="URL">
+                    </div>
+                    <button class="add_link" type="button">Add another link</button>
+                    <div class="profile_buttons">
+                        <button type="button" id="cancel">Cancel</button> 
+                        <button type="button" id="save">Save Profile</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <button class="edit_butt" id="edit_link">Cancel Editing</button>
         </div>
-        <button class="edit_butt" id="edit_link">Cancel Editing</button>
     </main>
     </div>
 </body>
