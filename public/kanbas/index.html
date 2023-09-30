@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -13,9 +13,9 @@
     <nav class="my_dashboard">
         <div class="nav-one">
             <ul class="kanbas-nav">
-                <li>
-                    <a href="../kanbas/profile/index.html">
-                        <i class="fa-solid fa-user fa-2xl" style="color: red;"></i> <br>
+                <li id="Account">
+                    <a href="#"> <!--../kanbas/profile/index.html-->
+                        <i class="fa-solid fa-user fa-2xl" style="color: gray;"></i> <br>
                         Account</a>
                 </li>
                 <li style="background: white;">
@@ -88,6 +88,35 @@
             </li>
         </ul>
     </div>
+    <div class="account-nav" id="account-nav">
+        <div class="prof-container">
+            <div class="prof-circle"><h2>JS</h2></div>
+            <h3>Justin Steinberg</h3>
+        </div>
+        <ul>
+            <li>
+                <a href="#">Notifications</a>
+            </li>
+            <li>
+                <a href="../kanbas/profile/index.html">Profile</a>
+            </li>
+            <li>
+                <a href="#">Settings</a>
+            </li>
+            <li>
+                <a href="#">ePortfolios</a>
+            </li>
+            <li>
+                <a hre="#">The Hub</a>
+            </li>
+            <li>
+                <a href="#">Qwickly Course Tools</a>
+            </li>
+            <li>
+                <a href="#">Global Announcements</a>
+            </li>
+        </ul>
+    </div>
     <main class="dash-board-content"> 
         <div class="webdev">
             <h1>Dashboard</h1>
@@ -148,17 +177,41 @@
 <script>
     const courseNav = document.getElementById("courses-nav");
     const courseTab = document.getElementById("Courses");
-    let isMoved = false;
+    const accountNav = document.getElementById("account-nav");
+    const accountTab = document.getElementById("Account");
+    let isMovedCourse = false;
+    let isMovedAccount = false;
     courseTab.addEventListener("click", function(){
-        if(isMoved){
+        if(isMovedCourse){
             courseNav.classList.remove('movedPos');
             courseNav.classList.add('originalPos');
         }
         else{
             courseNav.classList.remove('originalPos');
             courseNav.classList.add('movedPos')
+            if(isMovedAccount){
+                accountNav.classList.remove('movedPos');
+                accountNav.classList.add('originalPos');
+                isMovedAccount = !isMovedAccount;
+            }
         }
-        isMoved = !isMoved;
+        isMovedCourse = !isMovedCourse;
+    });
+    accountTab.addEventListener("click", function(){
+        if(isMovedAccount){
+            accountNav.classList.remove('movedPos');
+            accountNav.classList.add('originalPos');
+        }
+        else{
+            accountNav.classList.remove('originalPos');
+            accountNav.classList.add('movedPos')
+            if(isMovedCourse){
+                courseNav.classList.remove('movedPos');
+                courseNav.classList.add('originalPos');
+                isMovedCourse = !isMovedCourse;
+            }
+        }
+        isMovedAccount = !isMovedAccount;
     });
 </script>
 </html>
