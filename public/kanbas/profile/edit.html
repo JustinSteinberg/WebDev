@@ -76,7 +76,7 @@
                     <li>
                         <a href="#">Notification</a>
                     </li>
-                    <li style="border-left: 2px solid red">
+                    <li style="border-left: 2px solid black">
                         <a href="#">Profile</a>
                     </li>
                     <li>
@@ -108,7 +108,7 @@
             </div>
                 <div class="profile_info">
                     <h2>Justin Steinberg</h2>
-                    <form>
+                    <form class="edit_profile">
                     <label for="name">Name:</label>
                     <input type="text" name="name" id="name" placeholder="Justin Steinberg">
                     <label for="pronouns">Pronouns:</label>
@@ -133,18 +133,24 @@
                         <label for="URL">URL</label>
                     </div>
                     <div class="links">
-                        <input type="text" name="URL_Title" id="URL_Title"> -->
+                        <input type="text" name="URL_Title" id="URL_Title">
+                        <i class="fa-solid fa-arrow-right"></i>
                         <input type="text" name="URL" id="URL">
+                        <i class="fa-solid fa-x"></i>
                     </div>
-                    <button class="add_link" type="button">Add another link</button>
+                    <button class="add_link btn btn-secondary p-1" type="button">Add another link</button>
                     <div class="profile_buttons">
-                        <button type="button" id="cancel">Cancel</button> 
-                        <button type="button" id="save">Save Profile</button>
+                        <button class="btn btn-secondary" type="button" id="cancel">Cancel</button> 
+                        <button class="btn btn-danger" type="button" id="save">Save Profile</button>
                     </div>
                     </form>
                 </div>
             </div>
-            <button class="edit_butt" id="edit_link">Cancel Editing</button>
+            <div class="cancel_button">
+                <button class="edit_butt btn btn-secondary" id="edit_link">
+                    <i class="fa-solid fa-pencil"></i>
+                    Cancel Editing</button>
+            </div>
         </div>
     </main>
     </div>

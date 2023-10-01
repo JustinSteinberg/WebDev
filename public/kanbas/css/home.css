@@ -144,6 +144,15 @@ nav i{
     overflow-y: hidden;
 }
 
+.class_card:hover{
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.9);
+}
+
+.webdev a{
+    text-decoration: none;
+}
+
+
 .card-color{
     width: 100%;
     height: 50%;
@@ -198,13 +207,14 @@ nav i{
 
 
 #buttons{
-    margin-bottom: 10px;
+   /* margin-bottom: 10px;*/
+   display: flex;
 }
 
 #buttons li{
     display: inline;
     list-style-type: none;
-    margin: 10px;
+    margin: 1px;
 }
 
 #buttons button, #buttons select{
@@ -222,12 +232,34 @@ aside{
     justify-self: flex-end;
 }
 
+.home_side{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .butts{
     margin: 10px 0 10px 0;
 }
 
 .side{
-    margin: 10px 0px 10px 20px; 
+    margin: 10px; 
+}
+
+.side li{
+    border: 3px solid white;
+}
+
+.side a{
+    color: black;
+    text-decoration: none;
+}
+
+.coming_up{
+    border-bottom: 1px solid black;
+    text-align: left;
+    margin-top: 10px;
+    width: 100%;
 }
 
 .calendar{
@@ -276,13 +308,27 @@ th, td{
 
 .assignments{
     border-bottom: 1px solid black;
+    padding-bottom: 5px;
 }
+
+.assignments ul{
+    list-style: none;
+}
+
+.assignments a{
+    text-decoration: none;
+}
+
 
 #assignments, #quizzes, #exams, #projects{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.assignment-border{
+    border-left: 5px solid green;
 }
 
 .edit_work{
@@ -318,6 +364,10 @@ th, td{
     flex: 1;
 }
 
+.profile_content > ul{
+    list-style: none;
+}
+
 .page_header{
     border-bottom: 1px solid gray;
     display: flex;
@@ -351,9 +401,8 @@ th, td{
 .edit_butt{
     grid-column: 3 / 4;
     grid-row: 2 / 3;
-    height: 30px;
-    width: 120px;
-    margin: 20px 10px;
+    height: 40px;
+    margin: 20px 20px;
 }
 
 .link_labels{
@@ -361,7 +410,7 @@ th, td{
 }
 
 .link_labels label{
-    margin: 20px 55px 20px 55px;
+    margin: 20px 125px 20px 65px;
     text-align: center;
 }
 
@@ -375,19 +424,35 @@ th, td{
 }
 
 .profile_buttons{
-    margin: 20px 0;
+    margin: 20px 0px;
     display: flex;
     justify-content: end;
 }
 .profile_buttons button{
     margin: 5px;
-    width: 100px;
     height: 50px;
 }
 
 .profile_buttons button:last-child{
     color: white;
     background-color: red;
+}
+
+.edit_profile input, .edit_profile select{
+    padding: 4px;
+   /* width: 50%;*/
+}
+
+.edit_profile textarea{
+    padding: 0 0 50px 0px;
+   /* width: 50%;*/
+    text-align: start;
+}
+
+.cancel_button{
+    flex: 0.5;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .settings_nav{
@@ -476,4 +541,30 @@ th, td{
     border-bottom: 1px solid gray;
     margin: 5px 0px;
     padding: 5px 0px;
+}
+
+.breadcrumb{
+    background-color: white;
+    margin: 0;
+}
+
+.breadcrumb-item + .breadcrumb-item::before{
+    content: ">";
+}
+
+.work_list{
+    list-style: none;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.work_list a{
+    text-decoration: none;
+    color: black;
+}
+
+.percent_total{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1px 5px 1px 5px;
 }
