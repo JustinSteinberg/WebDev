@@ -42,6 +42,7 @@ nav i{
     display: flex;
     flex-direction: column;
     width: 100px;
+    z-index: 10;
 }
 
 .nav-one ul{
@@ -284,6 +285,10 @@ form input, form textarea, form select{
     margin: 10px 0;
 }
 
+.apply_filter{
+    width: fit-content;
+}
+
 /* Table is for grade.html */
 table{
     border: 1px solid black;
@@ -306,9 +311,17 @@ th, td{
     text-align: center;
 } 
 
-.assignments{
-    border-bottom: 1px solid black;
-    padding-bottom: 5px;
+.inputs_names{
+    width: 100%;
+}
+
+.input_name, .input_assignment{
+    width: 50%;
+}
+
+.assignments_border{
+    border-top: 1px solid black;
+    margin-top: 10px;
 }
 
 .assignments ul{
@@ -331,6 +344,13 @@ th, td{
     border-left: 5px solid green;
 }
 
+.edit_assignment{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .edit_work{
     display: inline-flex;
 }
@@ -342,12 +362,15 @@ th, td{
 
 .edit_submit{
     display: inline-flex;
-    justify-content: center;
+    justify-content: end;
 }
 
 
 .edit_submit button{
-   margin: 10px;
+   margin-left: 5px;
+   margin-top: 5px;
+   padding: 2px;
+   width: 100px;
 }
 
 /*
@@ -453,6 +476,13 @@ th, td{
     flex: 0.5;
     display: flex;
     justify-content: flex-end;
+}
+
+.submission_type{
+    border: 1px solid black;
+    align-self: center;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .settings_nav{
@@ -567,4 +597,19 @@ th, td{
     border: 1px solid black;
     border-radius: 10px;
     padding: 1px 5px 1px 5px;
+}
+
+.width_change{
+    width: 70%;
+    align-self: flex-start;
+}
+
+.edit_labels{
+    display: inline;
+    text-align: right;
+    flex: 3;
+}
+
+.edit_inputs{
+    flex: 5;
 }

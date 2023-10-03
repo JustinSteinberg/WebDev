@@ -10,10 +10,10 @@
 </head>
 <body>
     <div class="my_container">
-    <nav>
+    <nav class="my_dashboard">
         <div class="nav-one">
             <ul class="kanbas-nav">
-                <li style="background-color: white;">
+                <li id="Account" style="background-color: white;">
                     <a href="#" style="color: red;">
                         <i class="fa-solid fa-user fa-2xl" style="color: gray;"></i> <br>
                         Account</a>
@@ -23,8 +23,8 @@
                         <i class="fa-solid fa-gauge fa-2xl" style="color: red;"></i> <br>
                         Dashboard</a>
                 </li>
-                <li>
-                    <a href="../home.html">
+                <li id="Courses">
+                    <a href="#">
                         <i class="fa-solid fa-book fa-2xl" style="color: red;"></i> <br>
                         Courses</a>
                 </li>
@@ -67,6 +67,58 @@
         </div>
        
     </nav>
+    <div class="courses-nav" id="courses-nav">
+        <h2>Courses</h2>
+        <ul>
+            <li>
+                <a href="../home.html">CS5610 17367 Web Development</a>
+            </li>
+            <li>
+                <a href="../home.html">CS5340 Human Computer Interaction</a>
+            </li>
+            <li>
+                <a href="../home.html">CS5004 16762 Object-Oriented Design</a>
+            </li>
+            <li>
+                <a href="../home.html">CS5008 Data Structures, Algorithms, and Their Applications</a>
+            </li>
+            <li>
+                <a hre="../home.html">ARTG5610 34767 Design Systems</a>
+            </li>
+            <li>
+                <a href="../home.html">Career Design Course</a>
+            </li>
+        </ul>
+    </div>
+    <div class="account-nav" id="account-nav">
+        <div class="prof-container">
+            <div class="prof-circle"><h2>JS</h2></div>
+            <h3>Justin Steinberg</h3>
+        </div>
+        <ul>
+            <li>
+                <a href="#">Notifications</a>
+            </li>
+            <li>
+                <a href="../profile/index.html">Profile</a>
+            </li>
+            <li>
+                <a href="#">Settings</a>
+            </li>
+            <li>
+                <a href="#">ePortfolios</a>
+            </li>
+            <li>
+                <a hre="#">The Hub</a>
+            </li>
+            <li>
+                <a href="#">Qwickly Course Tools</a>
+            </li>
+            <li>
+                <a href="#">Global Announcements</a>
+            </li>
+        </ul>
+    </div>
 
     <main class="content"> 
         <div class="page_header">
@@ -131,5 +183,45 @@
     document.getElementById("edit_link").addEventListener('click', function(){
         window.location.href = "../profile/edit.html"
     });
+
+    const courseNav = document.getElementById("courses-nav");
+    const courseTab = document.getElementById("Courses");
+    const accountNav = document.getElementById("account-nav");
+    const accountTab = document.getElementById("Account");
+    let isMovedCourse = false;
+    let isMovedAccount = false;
+    courseTab.addEventListener("click", function(){
+        if(isMovedCourse){
+            courseNav.classList.remove('movedPos');
+            courseNav.classList.add('originalPos');
+        }
+        else{
+            courseNav.classList.remove('originalPos');
+            courseNav.classList.add('movedPos')
+            if(isMovedAccount){
+                accountNav.classList.remove('movedPos');
+                accountNav.classList.add('originalPos');
+                isMovedAccount = !isMovedAccount;
+            }
+        }
+        isMovedCourse = !isMovedCourse;
+    });
+    accountTab.addEventListener("click", function(){
+        if(isMovedAccount){
+            accountNav.classList.remove('movedPos');
+            accountNav.classList.add('originalPos');
+        }
+        else{
+            accountNav.classList.remove('originalPos');
+            accountNav.classList.add('movedPos')
+            if(isMovedCourse){
+                courseNav.classList.remove('movedPos');
+                courseNav.classList.add('originalPos');
+                isMovedCourse = !isMovedCourse;
+            }
+        }
+        isMovedAccount = !isMovedAccount;
+    });
+
 </script>
 </html>

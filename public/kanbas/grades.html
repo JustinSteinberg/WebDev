@@ -10,11 +10,11 @@
 </head>
 <body>
     <div class="my_container">
-    <nav>
+    <nav class="my_dashboard">
         <div class="nav-one">
             <ul class="kanbas-nav">
-                <li>
-                    <a href="../kanbas/profile/index.html">
+                <li id="Account">
+                    <a href="#">
                         <i class="fa-solid fa-user fa-2xl" style="color: gray;"></i> <br>
                         Account</a>
                 </li>
@@ -23,8 +23,8 @@
                         <i class="fa-solid fa-gauge fa-2xl" style="color: red;"></i> <br>
                         Dashboard</a>
                 </li>
-                <li style="background-color: white;">
-                    <a href="../kanbas/home.html" style="color: red">
+                <li id="Courses" style="background-color: white;">
+                    <a href="#" style="color: red">
                         <i class="fa-solid fa-book fa-2xl" style="color: red;"></i> <br>
                         Courses</a>
                 </li>
@@ -68,9 +68,67 @@
         </div>
        
     </nav>
+    <div class="courses-nav" id="courses-nav">
+        <h2>Courses</h2>
+        <ul>
+            <li>
+                <a href="../kanbas/home.html">CS5610 17367 Web Development</a>
+            </li>
+            <li>
+                <a href="../kanbas/home.html">CS5340 Human Computer Interaction</a>
+            </li>
+            <li>
+                <a href="../kanbas/home.html">CS5004 16762 Object-Oriented Design</a>
+            </li>
+            <li>
+                <a href="../kanbas/home.html">CS5008 Data Structures, Algorithms, and Their Applications</a>
+            </li>
+            <li>
+                <a hre="../kanbas/home.html">ARTG5610 34767 Design Systems</a>
+            </li>
+            <li>
+                <a href="../kanbas/home.html">Career Design Course</a>
+            </li>
+        </ul>
+    </div>
+    <div class="account-nav" id="account-nav">
+        <div class="prof-container">
+            <div class="prof-circle"><h2>JS</h2></div>
+            <h3>Justin Steinberg</h3>
+        </div>
+        <ul>
+            <li>
+                <a href="#">Notifications</a>
+            </li>
+            <li>
+                <a href="../kanbas/profile/index.html">Profile</a>
+            </li>
+            <li>
+                <a href="#">Settings</a>
+            </li>
+            <li>
+                <a href="#">ePortfolios</a>
+            </li>
+            <li>
+                <a hre="#">The Hub</a>
+            </li>
+            <li>
+                <a href="#">Qwickly Course Tools</a>
+            </li>
+            <li>
+                <a href="#">Global Announcements</a>
+            </li>
+        </ul>
+    </div>
+
     <main class="content"> 
         <div class="page_header">
-            <h3>Justin Steinberg's Profile</h3>
+            <h3>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">CS5610.17367.202410</li>
+                    <li class="breadcrumb-item active">Grades</li>
+                </ol>
+            </h3>
         </div>
         <div class="sub-content">
             <div class="second-nav">
@@ -132,46 +190,68 @@
                 </ul>
             </div>
             <div class="profile_content">
-                <div>
-                    <select>
-                        <option>Gradebook</option>
-                    </select>
-                    <button>
+                <div class="d-flex justify-content-end">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle mr-1">Gradebook</button>
+                        <div class="dropdown-menu">
+                            <select class="form-select">
+                                <option>Gradebook</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary mr-1">
+                        <i class="fa-solid fa-file-import"></i>
                         Import
                     </button>
-                    <select>
-                        <option>Export</option>
-                    </select>
-                    <button>
-                        Configure
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle mr-1">
+                            <i class="fa-solid fa-file-export"></i>
+                            Export</button>
+                        <div class="dropdown-menu">
+                            <select class="form-select">
+                                <option>Export</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary">
+                        <i class="fa-solid fa-gear"></i>
                     </button>
                 </div>
                 <form>
-                    <label for="student_name">Student Names</label>
-                    <input type="text" id="student_name" name="student_name" placeholder="Search Students">
-                    <label for="assignment_names">Assignment Names</label>
-                    <input type="text" id="assignment_names" name="assignment_names" placeholder="Search Assignments">
-                    <input type="submit" value="Apply Filters">
+                    <div class="d-flex justify-content-start inputs_names">
+                        <div class="d-flex flex-column input_name">
+                            <label for="student_name">Student Names</label>
+                            <input class="form-control pr-3" type="text" id="student_name" name="student_name" placeholder="Search Students">
+                        </div>
+                        <div class="d-flex flex-column ml-5 input_assignment">
+                            <label for="assignment_names ">Assignment Names</label>
+                            <input class="form-control pr-3" type="text" id="assignment_names" name="assignment_names" placeholder="Search Assignments">
+                        </div>
+                    </div>
+                    <button type="submit" class="from-control btn btn-secondary apply_filter p-2">
+                        <i class="fa-solid fa-filter"></i>
+                        Apply Filter</button>
                 </form>
-                <table>
+                <div class="table-responsive">
+                <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>
+                            <th scope="col">
                                 Student Name
                             </th>
-                            <th>
+                            <th scope="col">
                                 A1 SETUP <br>
                                 Out of 100
                             </th>
-                            <th>
+                            <th scope="col">
                                 A2 HTML <br>
                                 Out of 100
                             </th>
-                            <th>
+                            <th scope="col">
                                 A3 CSS <br>
                                 Out of 100
                             </th>
-                            <th>
+                            <th scope="col">
                                 A4 BOOTSTRAP <br>
                                 Out of 100
                             </th>
@@ -265,9 +345,50 @@
                         </tr>
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
     </main>
     </div>
 </body>
+<script>
+    const courseNav = document.getElementById("courses-nav");
+    const courseTab = document.getElementById("Courses");
+    const accountNav = document.getElementById("account-nav");
+    const accountTab = document.getElementById("Account");
+    let isMovedCourse = false;
+    let isMovedAccount = false;
+    courseTab.addEventListener("click", function(){
+        if(isMovedCourse){
+            courseNav.classList.remove('movedPos');
+            courseNav.classList.add('originalPos');
+        }
+        else{
+            courseNav.classList.remove('originalPos');
+            courseNav.classList.add('movedPos')
+            if(isMovedAccount){
+                accountNav.classList.remove('movedPos');
+                accountNav.classList.add('originalPos');
+                isMovedAccount = !isMovedAccount;
+            }
+        }
+        isMovedCourse = !isMovedCourse;
+    });
+    accountTab.addEventListener("click", function(){
+        if(isMovedAccount){
+            accountNav.classList.remove('movedPos');
+            accountNav.classList.add('originalPos');
+        }
+        else{
+            accountNav.classList.remove('originalPos');
+            accountNav.classList.add('movedPos')
+            if(isMovedCourse){
+                courseNav.classList.remove('movedPos');
+                courseNav.classList.add('originalPos');
+                isMovedCourse = !isMovedCourse;
+            }
+        }
+        isMovedAccount = !isMovedAccount;
+    });
+</script>
 </html>

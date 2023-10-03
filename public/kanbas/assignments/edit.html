@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="my_container">
-    <nav>
+    <nav class="my_dashboard">
         <div class="nav-one">
             <ul class="kanbas-nav">
                 <li>
@@ -67,9 +67,68 @@
 
         </div>
     </nav>
+    <div class="courses-nav" id="courses-nav">
+        <h2>Courses</h2>
+        <ul>
+            <li>
+                <a href="../kanbas/home.html">CS5610 17367 Web Development</a>
+            </li>
+            <li>
+                <a href="../kanbas/home.html">CS5340 Human Computer Interaction</a>
+            </li>
+            <li>
+                <a href="../kanbas/home.html">CS5004 16762 Object-Oriented Design</a>
+            </li>
+            <li>
+                <a href="../kanbas/home.html">CS5008 Data Structures, Algorithms, and Their Applications</a>
+            </li>
+            <li>
+                <a hre="../kanbas/home.html">ARTG5610 34767 Design Systems</a>
+            </li>
+            <li>
+                <a href="../kanbas/home.html">Career Design Course</a>
+            </li>
+        </ul>
+    </div>
+    <div class="account-nav" id="account-nav">
+        <div class="prof-container">
+            <div class="prof-circle"><h2>JS</h2></div>
+            <h3>Justin Steinberg</h3>
+        </div>
+        <ul>
+            <li>
+                <a href="#">Notifications</a>
+            </li>
+            <li>
+                <a href="../kanbas/profile/index.html">Profile</a>
+            </li>
+            <li>
+                <a href="#">Settings</a>
+            </li>
+            <li>
+                <a href="#">ePortfolios</a>
+            </li>
+            <li>
+                <a hre="#">The Hub</a>
+            </li>
+            <li>
+                <a href="#">Qwickly Course Tools</a>
+            </li>
+            <li>
+                <a href="#">Global Announcements</a>
+            </li>
+        </ul>
+    </div>
+
     <main class="content"> 
         <div class="page_header">
-            <h3>CS5610.17367.202410</h3>
+            <h3>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">CS5610.17367.202410</li>
+                    <li class="breadcrumb-item">Assignments</li>
+                    <li class="breadcrumb-item active">A1 - ENV + HTML</li>
+                </ol>
+            </h3>
         </div> 
         <div class="sub-content">
             <div class="second-nav">
@@ -131,91 +190,137 @@
                 </ul>
             </div>
             <div class="profile_content">
-                <div class="assignments">
-                    <select>
-                        <option>Speed Grader</option>
-                    </select>
+                <div>
+                    <button class="btn btn-secondary float-right ml-3">
+                        <i class="fa fa-ellipsis-v"></i>
+                    </button>
+                    <h4 class="float-right mt-1" style="color: green">
+                        <i class="fa fa-check-circle"></i>
+                        Published
+                    </h4>
                 </div>
-                <div id="assignments">
-                    
+                <div class="assignments_border edit_assignment" id="assignments container">
                     <form>
                         <label for="assignment_name">Assignment Name</label>
-                        <input type="text" name="assignment_name" placeholder="A1 - ENV + HTML">
-                        <textarea name="description" placeholder="This is the assignment description."></textarea>
-                        <label for="points">Points</label>
-                        <input type="text" name="points" placeholder="100">
-                        <label for="Assignment_Group">Assignment Group</label>
-                        <select name="Assignment_Group">
-                            <option>
-                                ASSIGNMENTS
-                            </option>
-                        </select>
-                        <label for="Display_Grade">Display Grade as</label>
-                        <select name="Display_Grade">
-                            <option>
-                                Percentage
-                            </option>
-                        </select>
-                        <label for="Sub_type">Submission Type</label>
-                        <select name="Sub_Type">
-                            <option>
-                                Online
-                            </option>
-                        </select>
-                        <label for="Entry_Option">Online Entry Options</label>
-                        <label for="text_entry">
-                            <input type="checkbox" name="Entry_Options" value="Text Entry">
-                            Text Entry
-                        </label>
-                        <label for="website_url">
-                            <input type="checkbox" name="Entry_Options" value="Website URL">
-                            Website URL
-                        </label>
-                        <label for="media_recordings">
-                            <input type="checkbox" name="Entry_Options" value="Media Recordings">
-                            Media Recordings
-                        </label>
-                        <label  for="student_annotation">
-                            <input type="checkbox" name="Entry_Options" value="Student Annotation">
-                            Student Annotation
-                        </label>
-                        <label  for="file_uploads">
-                            <input type="checkbox" name="Entry_Options" value="File Uploads">
-                            File Uploads
-                        </label>
-                        <label for="Submission_Attempts">Submission Attempts</label>
-                        <select name="Submission_Attempts">
-                            <option>
-                                Unlimited
-                            </option>
-                        </select>
-                        <label for="Plagarism_Review">Plagarism Review</label>
-                        <select name="Plagarism_Review">
-                            <option>
-                                None
-                            </option>
-                        </select>
-                        <label for="group_assignment">Group Assignment</label>
-                        <label>
-                            <input type="checkbox" name="group_assignment" value="Group Assignment">
-                            This is a group assignment
-                        </label>
-                        <label for="peer_reviews">Peer Reviews</label>
-                        <label>
-                            <input type="checkbox" name="peer_reviews" value="Peer Reviews">
-                            Require Peer Reviews
-                        </label>
-                        <label for="assign_to">Assign To</label>
-                        <input type="text" name="assign_to" placeholder="Everyone">
-                        <label for="Due">Due</label>
-                        <input type="date" name="Due" value="2023-09-15">
-                        <label for="Available">Available from</label>
-                        <input type="date" name="Available" value="2023-09-15">
-                        <label for="Until">Until</label>
-                        <input type="date" name="Until" value="2023-09-15">
-                        <div class="edit_submit">
-                            <button type="button" id="cancel">Cancel</button>
-                            <button type="button" id="save">Save</button>
+                        <input class="form-control" type="text" name="assignment_name" placeholder="A1 - ENV + HTML">
+                        <textarea class="form-control" name="description" placeholder="This is the assignment description."></textarea>
+                        <div class="width_change">
+                            <div class="row align-items-center">
+                                <label class="col edit_labels" for="points">Points</label> 
+                                <input class="col-10 edit_inputs form-control" type="text" name="points" placeholder="100">
+                            </div>
+                            <div class="row align-items-center">
+                            <label class="edit_labels col" for="Assignment_Group">Assignment Group</label>
+                                <select class="edit_inputs col-10 form-control form-select form-select-l mb-3" name="Assignment_Group">
+                                    <option value="Assignments">
+                                        ASSIGNMENTS
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="row align-items-center">
+                                <label class="col edit_labels" for="Display_Grade">Display Grade as</label>
+                                <select class="col-10 edit_inputs form-control form-select" name="Display_Grade">
+                                    <option>
+                                        Percentage
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="row align-content-center">
+                                <label class="col edit_labels mt-2" for="Sub_type">Submission Type</label>
+                                <div class="col-10 edit_inputs submission_type mt-2 mb-2">
+                                    <select class="form-control" name="Sub_Type">
+                                        <option>
+                                            Online
+                                        </option>
+                                    </select>
+                                <label for="Entry_Option">Online Entry Options</label>
+                                <div class="form-check">
+                                    <label class="form-check-label d-flex align-items-center" for="text_entry">
+                                        <input class="form-check mr-2" type="checkbox" name="Entry_Options" value="Text Entry">
+                                        Text Entry
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label d-flex align-items-center" for="website_url">
+                                        <input class="form-check mr-2" type="checkbox" name="Entry_Options" value="Website URL">
+                                        Website URL
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-labe d-flex align-items-center" for="media_recordings">
+                                        <input class="form-check mr-2" type="checkbox" name="Entry_Options" value="Media Recordings">
+                                        Media Recordings
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label d-flex align-items-center" for="student_annotation">
+                                        <input class="form-check mr-2" type="checkbox" name="Entry_Options" value="Student Annotation">
+                                        Student Annotation
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label d-flex align-items-center" for="file_uploads">
+                                        <input class="form-check mr-2" type="checkbox" name="Entry_Options" value="File Uploads">
+                                        File Uploads
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center">
+                            <label class="col edit_labels" for="Submission_Attempts">Submission Attempts</label>
+                            <select class="col-10 edit_inputs form-control" name="Submission_Attempts">
+                                <option>
+                                    Unlimited
+                                </option>
+                            </select>
+                        </div>
+                        <div class="row align-items-center">
+                            <label class="col edit_labels" for="Plagarism_Review">Plagarism Review</label>
+                            <select class="col-10 edit_inputs form-control form-select" name="Plagarism_Review">
+                                <option>
+                                    None
+                                </option>
+                            </select>
+                        </div>
+                        <div class="row align-items-center">
+                            <label class="col edit_labels" for="group_assignment">Group Assignment</label>
+                            <div class="col-10 edit_inputs submission_type mt-2 mb-2">
+                                <div class="form-check">
+                                    <label class="form-check-label d-flex align-items-center">
+                                        <input class="form-check mr-2" type="checkbox" name="group_assignment" value="Group Assignment">
+                                        This is a group assignment
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center">
+                            <label class="col edit_labels"for="peer_reviews">Peer Reviews</label>
+                            <div class="col-10 edit_inputs submission_type mt-2 mb-2">
+                                <div class="form-check">
+                                    <label class="form-check-label d-flex align-items-center">
+                                        <input class="form-check mr-2" type="checkbox" name="peer_reviews" value="Peer Reviews">
+                                        Require Peer Reviews
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-content-center">
+                            <label class="col edit_labels mt-2">Assign</label>
+                            <div class="col-10 edit_inputs submission_type mt-2 mb-2">
+                                <label for="assign_to">Assign To</label>
+                                <input class="form-control" type="text" name="assign_to" placeholder="Everyone">
+                                <label for="Due">Due</label>
+                                <input class="form-control" type="date" name="Due" value="2023-09-15">
+                                <label for="Available">Available from</label>
+                                <input class="form-control" type="date" name="Available" value="2023-09-15">
+                                <label for="Until">Until</label>
+                                <input class="form-control" type="date" name="Until" value="2023-09-15">
+                            </div>
+                        </div>
+                            <div class="edit_submit float-right">
+                                <button class="form-control btn btn-secondary" type="button" id="cancel">Cancel</button>
+                                <button class="form-control btn btn-danger" type="button" id="save">Save</button>
+                            </div>
                         </div>
                     </form>
                 </div>
