@@ -14,8 +14,8 @@
     <nav class="my_dashboard">
         <div class="nav-one">
             <ul class="kanbas-nav">
-                <li>
-                    <a href="../profile/index.html">
+                <li id="Account">
+                    <a href="#">
                         <i class="fa-solid fa-user fa-2xl" style="color: gray;"></i> <br>
                         Account</a>
                 </li>
@@ -24,8 +24,8 @@
                         <i class="fa-solid fa-gauge fa-2xl" style="color: red;"></i> <br>
                         Dashboard</a>
                 </li>
-                <li style="background-color: white;">
-                    <a href="../home.html" style="color: red">
+                <li id="Courses" style="background-color: white;">
+                    <a href="#" style="color: red">
                         <i class="fa-solid fa-book fa-2xl" style="color: red;"></i> <br>
                         Courses</a>
                 </li>
@@ -71,22 +71,22 @@
         <h2>Courses</h2>
         <ul>
             <li>
-                <a href="../kanbas/home.html">CS5610 17367 Web Development</a>
+                <a href="../home.html">CS5610 17367 Web Development</a>
             </li>
             <li>
-                <a href="../kanbas/home.html">CS5340 Human Computer Interaction</a>
+                <a href="../home.html">CS5340 Human Computer Interaction</a>
             </li>
             <li>
-                <a href="../kanbas/home.html">CS5004 16762 Object-Oriented Design</a>
+                <a href="../home.html">CS5004 16762 Object-Oriented Design</a>
             </li>
             <li>
-                <a href="../kanbas/home.html">CS5008 Data Structures, Algorithms, and Their Applications</a>
+                <a href="../home.html">CS5008 Data Structures, Algorithms, and Their Applications</a>
             </li>
             <li>
-                <a hre="../kanbas/home.html">ARTG5610 34767 Design Systems</a>
+                <a hre="../home.html">ARTG5610 34767 Design Systems</a>
             </li>
             <li>
-                <a href="../kanbas/home.html">Career Design Course</a>
+                <a href="../home.html">Career Design Course</a>
             </li>
         </ul>
     </div>
@@ -100,7 +100,7 @@
                 <a href="#">Notifications</a>
             </li>
             <li>
-                <a href="../kanbas/profile/index.html">Profile</a>
+                <a href="../profile/index.html">Profile</a>
             </li>
             <li>
                 <a href="#">Settings</a>
@@ -146,7 +146,7 @@
                         <a href="#">Zoom Meetings</a>
                     </li>
                     <li style="border-left: 2px solid black;">
-                        <a href="../assignments/index.html">Assignments</a>
+                        <a href="../assignments/index.html"><strong>Assignments</strong></a>
                     </li>
                     <li>
                         <a href="#">Quizzes</a>
@@ -203,7 +203,7 @@
                     <form>
                         <label for="assignment_name">Assignment Name</label>
                         <input class="form-control" type="text" name="assignment_name" placeholder="A1 - ENV + HTML">
-                        <textarea class="form-control" name="description" placeholder="This is the assignment description."></textarea>
+                        <textarea class="form-control" rows="4" name="description" placeholder="This is the assignment description."></textarea>
                         <div class="width_change">
                             <div class="row align-items-center">
                                 <label class="col edit_labels" for="points">Points</label> 
@@ -330,6 +330,44 @@
     </div>
 </body>
 <script>
+    const courseNav = document.getElementById("courses-nav");
+    const courseTab = document.getElementById("Courses");
+    const accountNav = document.getElementById("account-nav");
+    const accountTab = document.getElementById("Account");
+    let isMovedCourse = false;
+    let isMovedAccount = false;
+    courseTab.addEventListener("click", function(){
+        if(isMovedCourse){
+            courseNav.classList.remove('movedPos');
+            courseNav.classList.add('originalPos');
+        }
+        else{
+            courseNav.classList.remove('originalPos');
+            courseNav.classList.add('movedPos')
+            if(isMovedAccount){
+                accountNav.classList.remove('movedPos');
+                accountNav.classList.add('originalPos');
+                isMovedAccount = !isMovedAccount;
+            }
+        }
+        isMovedCourse = !isMovedCourse;
+    });
+    accountTab.addEventListener("click", function(){
+        if(isMovedAccount){
+            accountNav.classList.remove('movedPos');
+            accountNav.classList.add('originalPos');
+        }
+        else{
+            accountNav.classList.remove('originalPos');
+            accountNav.classList.add('movedPos')
+            if(isMovedCourse){
+                courseNav.classList.remove('movedPos');
+                courseNav.classList.add('originalPos');
+                isMovedCourse = !isMovedCourse;
+            }
+        }
+        isMovedAccount = !isMovedAccount;
+    });
     document.getElementById("cancel").addEventListener('click', function(){
         window.location.href = "../assignments/index.html"
     });

@@ -10,11 +10,11 @@
 </head>
 <body>
     <div class="my_container">
-        <nav>
+        <nav class="my_dashboard">
             <div class="nav-one">
                 <ul class="kanbas-nav">
-                    <li>
-                        <a href="../profile/index.html">
+                    <li id="Account">
+                        <a href="#">
                             <i class="fa-solid fa-user fa-2xl" style="color: gray;"></i> <br>
                             Account</a>
                     </li>
@@ -23,8 +23,8 @@
                             <i class="fa-solid fa-gauge fa-2xl" style="color: red;"></i> <br>
                             Dashboard</a>
                     </li>
-                    <li style="background-color: white;">
-                        <a href="../home.html" style="color: red">
+                    <li id="Courses" style="background-color: white;">
+                        <a href="#" style="color: red">
                             <i class="fa-solid fa-book fa-2xl" style="color: red;"></i> <br>
                             Courses</a>
                     </li>
@@ -69,22 +69,22 @@
             <h2>Courses</h2>
             <ul>
                 <li>
-                    <a href="../kanbas/home.html">CS5610 17367 Web Development</a>
+                    <a href="../home.html">CS5610 17367 Web Development</a>
                 </li>
                 <li>
-                    <a href="../kanbas/home.html">CS5340 Human Computer Interaction</a>
+                    <a href="../home.html">CS5340 Human Computer Interaction</a>
                 </li>
                 <li>
-                    <a href="../kanbas/home.html">CS5004 16762 Object-Oriented Design</a>
+                    <a href="../home.html">CS5004 16762 Object-Oriented Design</a>
                 </li>
                 <li>
-                    <a href="../kanbas/home.html">CS5008 Data Structures, Algorithms, and Their Applications</a>
+                    <a href="../home.html">CS5008 Data Structures, Algorithms, and Their Applications</a>
                 </li>
                 <li>
-                    <a hre="../kanbas/home.html">ARTG5610 34767 Design Systems</a>
+                    <a hre="../home.html">ARTG5610 34767 Design Systems</a>
                 </li>
                 <li>
-                    <a href="../kanbas/home.html">Career Design Course</a>
+                    <a href="../home.html">Career Design Course</a>
                 </li>
             </ul>
         </div>
@@ -98,7 +98,7 @@
                     <a href="#">Notifications</a>
                 </li>
                 <li>
-                    <a href="../kanbas/profile/index.html">Profile</a>
+                    <a href="../profile/index.html">Profile</a>
                 </li>
                 <li>
                     <a href="#">Settings</a>
@@ -120,7 +120,12 @@
     
         <main class="content"> 
             <div class="page_header">
-                <h3>CS5610.17367.202410</h3>
+                <h3>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">CS5610.17367.202410</li>
+                        <li class="breadcrumb-item active">Settings</li>
+                    </ol>
+                </h3>
             </div> 
             <div class="sub-content">
                 <div class="second-nav">
@@ -177,7 +182,7 @@
                             <a href="#">Syllabus</a>
                         </li>
                         <li style="border-left: 2px solid black;">
-                            <a href="../settings/index.html">Settings</a>
+                            <a href="../settings/index.html"><strong>Settings</strong></a>
                         </li>
                     </ul>
                 </div>
@@ -186,88 +191,183 @@
                         <ul class="settings_nav">
                             <li><a href="../settings/index.html">Course Details</a></li>
                             <li><a href="#">Sections</a></li>
-                            <li style="border-bottom: 1px solid white ; border-top: 1px solid black; border-left: 1px solid black; border-right: 1px solid black;"><a href="#">Navigation</a></li>
+                            <li style="border-bottom: 2px solid white ; border-top: 1px solid black; border-left: 1px solid black; border-right: 1px solid black;"><a href="#">Navigation</a></li>
                             <li><a href="#">Apps</a></li>               
                             <li><a href="#">Feature Options</a></li>
                             <li><a href="#">Integrations</a></li>
                         </ul>
                     </div>
-                    <h3>Drag and drop itmes to reorder them in the course navigation.</h3>
-                    <table class="course_nav">
+                    <h4>Drag and drop itmes to reorder them in the course navigation.</h4>
+                    <table class="table course_nav">
+                        
                         <tbody>
                             <tr>
                                 <td>Home</td>
                             </tr>
                             <tr>
-                                <td>Modules</td>
+                                <td>Modules
+                                    <i class="fas fa-ellipsis-v float-right"></i>
+
+                                </td>
                             </tr>
                             <tr>
-                                <td>Piazza</td>
+                                <td>Piazza
+                                    <i class="fas fa-ellipsis-v float-right"></i>
+
+                                </td>
                             </tr>
                             <tr>
-                                <td>Zoom Meetings</td>
+                                <td>Zoom Meetings
+                                    <i class="fas fa-ellipsis-v float-right"></i>
+
+                                </td>
                             </tr>
                             <tr>
-                                <td>Assignments</td>
+                                <td>Assignments
+                                    <i class="fas fa-ellipsis-v float-right"></i>
+
+                                </td>
                             </tr>
                             <tr>
-                                <td>Quizzes</td>
+                                <td>Quizzes
+                                    <i class="fas fa-ellipsis-v float-right"></i>
+
+                                </td>
                             </tr>
                             <tr>
-                                <td>Grades</td>
+                                <td>Grades
+                                    <i class="fas fa-ellipsis-v float-right"></i>
+
+                                </td>
                             </tr>
                             <tr>
-                                <td>People</td>
+                                <td>People
+                                    <i class="fas fa-ellipsis-v float-right"></i>
+
+                                </td>
                             </tr>
                             <tr>
-                                <td>Panopto Video</td>
+                                <td>Panopto Video
+                                    <i class="fas fa-ellipsis-v float-right"></i>
+
+                                </td>
                             </tr>
                         </tbody>
                     </table>
-                    <h3>Drag Items here to hide them from students.</h3>
+                    <h4>Drag Items here to hide them from students.</h4>
                     <p>Disabling most pages will cause students who visit those pages to be redirected to the course home page.</p>
                     <table class="course_nav">
                         <tbody>
                             <tr>
-                                <td>Chat</td>
+                                <td>Chat
+                                    <i class="fas fa-ellipsis-v float-right"></i>
+
+                                </td>
                             </tr>
                             <tr>
-                                <td>SCORM</td>
+                                <td>SCORM
+                                    <i class="fas fa-ellipsis-v float-right"></i>
+
+                                </td>
                             </tr>
                             <tr>
-                                <td>Attendance</td>
+                                <td>Attendance
+                                    <i class="fas fa-ellipsis-v float-right"></i>
+
+                                </td>
                             </tr>
                             <tr>
                                 <td>Barnes and Noble Bookstore</td>
                             </tr>
                             <tr>
-                                <td>Digication</td>
+                                <td>Digication
+                                    <i class="fas fa-ellipsis-v float-right"></i>
+
+                                </td>
                             </tr>
                             <tr>
-                                <td>Top Hat</td>
+                                <td>Top Hat
+                                    <i class="fas fa-ellipsis-v float-right"></i>
+
+                                </td>
                             </tr>
                             <tr>
-                                <td>Syllabus</td>
+                                <td>Syllabus
+                                    <i class="fas fa-ellipsis-v float-right"></i>
+
+                                </td>
                             </tr>
                             <tr>
-                                <td>Perusall</td>
+                                <td>Perusall
+                                    <i class="fas fa-ellipsis-v float-right"></i>
+
+                                </td>
                             </tr>
                             <tr>
-                                <td>Microsoft Team Meetings</td>
+                                <td>Microsoft Team Meetings
+                                    <i class="fas fa-ellipsis-v float-right"></i>
+
+                                </td>
                             </tr>
                             <tr>
-                                <td>FACT Reporting and Photo Roster</td>
+                                <td>FACT Reporting and Photo Roster
+                                    <i class="fas fa-ellipsis-v float-right"></i>
+
+                                </td>
                             </tr>
                             <tr>
-                                <td>Progress Reports (Navigate)</td>
+                                <td>Progress Reports (Navigate)
+                                    <i class="fas fa-ellipsis-v float-right"></i>
+
+                                </td>
                             </tr>
                         </tbody>
                     </table>
                     
-                    <button class="save">Save</button>
+                    <button class="btn btn-danger save">Save</button>
                 </div>
             </div>
         </main>
     </div>
 </body>
+<script>
+    const courseNav = document.getElementById("courses-nav");
+    const courseTab = document.getElementById("Courses");
+    const accountNav = document.getElementById("account-nav");
+    const accountTab = document.getElementById("Account");
+    let isMovedCourse = false;
+    let isMovedAccount = false;
+    courseTab.addEventListener("click", function(){
+        if(isMovedCourse){
+            courseNav.classList.remove('movedPos');
+            courseNav.classList.add('originalPos');
+        }
+        else{
+            courseNav.classList.remove('originalPos');
+            courseNav.classList.add('movedPos')
+            if(isMovedAccount){
+                accountNav.classList.remove('movedPos');
+                accountNav.classList.add('originalPos');
+                isMovedAccount = !isMovedAccount;
+            }
+        }
+        isMovedCourse = !isMovedCourse;
+    });
+    accountTab.addEventListener("click", function(){
+        if(isMovedAccount){
+            accountNav.classList.remove('movedPos');
+            accountNav.classList.add('originalPos');
+        }
+        else{
+            accountNav.classList.remove('originalPos');
+            accountNav.classList.add('movedPos')
+            if(isMovedCourse){
+                courseNav.classList.remove('movedPos');
+                courseNav.classList.add('originalPos');
+                isMovedCourse = !isMovedCourse;
+            }
+        }
+        isMovedAccount = !isMovedAccount;
+    });
+</script>
 </html>
