@@ -97,7 +97,7 @@ nav i{
     height: 100%;
 }
 
-.content{
+.content, .home-content{
     display: flex;
    /* flex: 1; */
     padding: 10px;
@@ -237,6 +237,7 @@ aside{
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .butts{
@@ -245,10 +246,13 @@ aside{
 
 .side{
     margin: 10px; 
+    border-radius: 50px;
 }
 
 .side li{
     border: 3px solid white;
+    border-radius: 10px !important;
+    text-align: left;
 }
 
 .side a{
@@ -624,4 +628,55 @@ th, td{
     display: inline;
     margin: 10px 0 10px 0;
     text-align: left;
+}
+
+.assignment-border .list-group-item{
+    padding-left: 5px;
+}
+
+.small_nav{
+    display: none;
+}
+
+.page_header_home{
+    display: inline;
+}
+
+.NU_logo{
+    width: 90%;
+    height: 90%;
+}
+
+@media (max-width: 768px){
+
+    .home-content{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .page_header_home{
+        display: none;
+    }
+
+    .small_nav{
+        display: inline;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        color: white;
+        background-color: black;
+        text-align: center;
+        padding: 5px;
+        z-index: 11;
+    }
+
+    .menu{
+        justify-self: flex-start;
+    }
+
+    .menu_2{
+        justify-self: flex-end;
+        align-self: center;
+    }
+
 }

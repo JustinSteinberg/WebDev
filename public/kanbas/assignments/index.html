@@ -13,7 +13,10 @@
     <div class="my_container">
     <nav class="my_dashboard">
         <div class="nav-one">
-            <ul class="kanbas-nav">
+            <ul class="kanbas-nav pt-1">
+                <li>
+                    <img class="NU_logo" src="../../images/NU_Logo.png">
+                </li>
                 <li id="Account">
                     <a href="#">
                         <i class="fa-solid fa-user fa-2xl" style="color: gray;"></i> <br>
@@ -190,7 +193,7 @@
             </div>
             <div class="profile_content">
                 <div class="assignments pb-3">
-                    <input class="pr-3 pt-2 pb-2" type="text" id="assignment_search" name="assignment_search" placeholder="Search for Assignments">
+                    <input class="pr-3 pt-2 pb-2 w-25 form-control d-inline" type="text" id="assignment_search" name="assignment_search" placeholder="Search for Assignments">
                     <button class="btn btn-secondary float-right">
                         <i class="fa fa-ellipsis-v"></i>
                     </button>
@@ -235,6 +238,7 @@
                     </div>
                     <ul class="list-group work_list">
                         <li class="list-group-item-dark p-3">
+                            <i class="fas fa-grip-vertical float-left mr-2"></i>
                             <strong>Assignments</strong>
                             <i class="fa fa-ellipsis-v float-right ml-3"></i>
                             <i class="fa fa-plus float-right ml-2" style="color: gray"></i>
@@ -242,35 +246,53 @@
 
                         </li>
                         <div class="assignment-border">
-                        <li class="list-group-item">
-                            <a href="../assignments/edit.html"><strong>A1 - ENV + HTML</strong> <br> Mutiple Modules</a> ! Not avalable yet
-                            <i class="fas fa-ellipsis-v float-right"></i>
-                            <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-grip-vertical float-left ml-1"></i>
+                            <div class="pl-3 flex-grow-1">
+                                <a href="../assignments/edit.html"><strong>A1 - ENV + HTML</strong> <br> Mutiple Modules</a> ! Not avalable yet
+                                <i class="fas fa-ellipsis-v float-right"></i>
+                                <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
+                            </div>
                         </li>
-                        <li class="list-group-item">
-                            <a href="../assignments/edit.html"><strong>A2 - CSS + BOOTSTRAP</strong><br> Mutiple Modules</a> ! Not avalable yet
-                            <i class="fas fa-ellipsis-v float-right"></i>
-                            <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-grip-vertical float-left ml-1"></i>
+                            <div class="pl-3 flex-grow-1">
+                                <a href="../assignments/edit.html"><strong>A2 - CSS + BOOTSTRAP</strong><br> Mutiple Modules</a> ! Not avalable yet
+                                <i class="fas fa-ellipsis-v float-right"></i>
+                                <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
+                            </div>
                         </li>
-                        <li class="list-group-item">
-                            <a href="../assignments/edit.html"><strong>A3 - JS + REACT</strong> <br> Mutiple Modules</a> ! Not avalable yet
-                            <i class="fas fa-ellipsis-v float-right"></i>
-                            <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-grip-vertical float-left ml-1"></i>
+                            <div class="pl-3 flex-grow-1">
+                                <a href="../assignments/edit.html"><strong>A3 - JS + REACT</strong> <br> Mutiple Modules</a> ! Not avalable yet
+                                <i class="fas fa-ellipsis-v float-right"></i>
+                                <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
+                            </div>
                         </li>
-                        <li class="list-group-item">
-                            <a href="../assignments/edit.html"><strong>A4 - STATE + REDUX</strong> <br> Mutiple Modules</a> ! Not avalable yet
-                            <i class="fas fa-ellipsis-v float-right"></i>
-                            <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-grip-vertical float-left ml-1"></i>
+                            <div class="pl-3 flex-grow-1">
+                                <a href="../assignments/edit.html"><strong>A4 - STATE + REDUX</strong> <br> Mutiple Modules</a> ! Not avalable yet
+                                <i class="fas fa-ellipsis-v float-right"></i>
+                                <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
+                            </div>
                         </li>
-                        <li class="list-group-item">
-                            <a href="../assignments/edit.html"><strong>A5 - NODE + SESSION</strong> <br> Mutiple Modules</a> ! Not avalable yet
-                            <i class="fas fa-ellipsis-v float-right"></i>
-                            <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-grip-vertical float-left ml-1"></i>
+                            <div class="pl-3 flex-grow-1">
+                                <a href="../assignments/edit.html"><strong>A5 - NODE + SESSION</strong> <br> Mutiple Modules</a> ! Not avalable yet
+                                <i class="fas fa-ellipsis-v float-right"></i>
+                                <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
+                            </div>
                         </li>
-                        <li class="list-group-item">
-                            <a href="../assignments/edit.html"><strong>A6 - MONGO + MONGOOSE</strong> <br> Mutiple Modules</a> ! Not avalable yet
-                            <i class="fas fa-ellipsis-v float-right"></i>
-                            <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-grip-vertical float-left ml-1"></i>
+                            <div class="pl-3 flex-grow-1">
+                                <a href="../assignments/edit.html"><strong>A6 - MONGO + MONGOOSE</strong> <br> Mutiple Modules</a> ! Not avalable yet
+                                <i class="fas fa-ellipsis-v float-right"></i>
+                                <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
+                            </div>
                         </li>
                         </div>
                     </ul>
@@ -306,37 +328,53 @@
                     </div>
                     <ul class="list-group work_list">
                         <li class="list-group-item-dark p-3">
+                            <i class="fas fa-grip-vertical float-left mr-2"></i>
                             <strong>Quizzes</strong>
                             <i class="fa fa-ellipsis-v float-right ml-3"></i>
                             <i class="fa fa-plus float-right ml-2" style="color: gray"></i>
-                            <div class="percent_total float-right">10% of Total</div>
-                        </li>
+                            <div class="percent_total float-right">10% of Total</div>                        </li>
                         <div class="assignment-border">
-                        <li class="list-group-item">
-                            <a href="#"><strong>Q1 - HTML</strong> <br> Mutiple Modules</a> ! Not avalable yet
-                            <i class="fas fa-ellipsis-v float-right"></i>
-                            <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#"><strong>Q2 - CSS</strong> <br> Mutiple Modules</a> ! Not avalable yet
-                            <i class="fas fa-ellipsis-v float-right"></i>
-                            <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#"><strong>Q3 - JS, ES6</strong> <br> Mutiple Modules</a> ! Not avalable yet
-                            <i class="fas fa-ellipsis-v float-right"></i>
-                            <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#"><strong>Q4 - NODE</strong> <br> Mutiple Modules</a> ! Not avalable yet
-                            <i class="fas fa-ellipsis-v float-right"></i>
-                            <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#"><strong>Q5 - MONGO</strong> <br> Mutiple Modules</a> ! Not avalable yet
-                            <i class="fas fa-ellipsis-v float-right"></i>
-                            <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
-                        </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="fas fa-grip-vertical float-left ml-1"></i>
+                                <div class="pl-3 flex-grow-1">
+                                    <a href="#"><strong>Q1 - HTML</strong> <br> Mutiple Modules</a> ! Not avalable yet
+                                    <i class="fas fa-ellipsis-v float-right"></i>
+                                    <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="fas fa-grip-vertical float-left ml-1"></i>
+                                <div class="pl-3 flex-grow-1">
+                                    <a href="#"><strong>Q2 - CSS</strong> <br> Mutiple Modules</a> ! Not avalable yet
+                                    <i class="fas fa-ellipsis-v float-right"></i>
+                                    <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
+                                    <div class="pl-3 flex-grow-1">
+                                </div>        
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="fas fa-grip-vertical float-left ml-1"></i>
+                                <div class="pl-3 flex-grow-1">
+                                    <a href="#"><strong>Q3 - JS, ES6</strong> <br> Mutiple Modules</a> ! Not avalable yet
+                                    <i class="fas fa-ellipsis-v float-right"></i>
+                                    <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="fas fa-grip-vertical float-left ml-1"></i>
+                                <div class="pl-3 flex-grow-1">
+                                    <a href="#"><strong>Q4 - NODE</strong> <br> Mutiple Modules</a> ! Not avalable yet
+                                    <i class="fas fa-ellipsis-v float-right"></i>
+                                    <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="fas fa-grip-vertical float-left ml-1"></i>
+                                <div class="pl-3 flex-grow-1">
+                                    <a href="#"><strong>Q5 - MONGO</strong> <br> Mutiple Modules</a> ! Not avalable yet
+                                    <i class="fas fa-ellipsis-v float-right"></i>
+                                    <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
+                                </div>
+                            </li>
                         </div>
                     </ul>
                 </div>
@@ -371,21 +409,28 @@
                     </div>
                     <ul class="list-group work_list">
                         <li class="list-group-item-dark p-3">
+                            <i class="fas fa-grip-vertical float-left mr-2"></i>
                             <strong>Exams</strong>
                             <i class="fa fa-ellipsis-v float-right ml-3"></i>
                             <i class="fa fa-plus float-right ml-2" style="color: gray"></i>
                             <div class="percent_total float-right">20% of Total</div>
                         </li>
                         <div class="assignment-border">
-                        <li class="list-group-item">
-                            <a href="#"><strong>Midterm</strong><br> Mutiple Modules</a> ! Not avalable yet
-                            <i class="fas fa-ellipsis-v float-right"></i>
-                            <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-grip-vertical float-left ml-1"></i>
+                            <div class="pl-3 flex-grow-1">
+                                <a href="#"><strong>Midterm</strong><br> Mutiple Modules</a> ! Not avalable yet
+                                <i class="fas fa-ellipsis-v float-right"></i>
+                                <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
+                            </div>
                         </li>
-                        <li class="list-group-item">
-                            <a href="#"><strong>Final</strong></a><br> Mutiple Modules</a> ! Not avalable yet
-                            <i class="fas fa-ellipsis-v float-right"></i>
-                            <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
+                        <li class="list-group-item d-flex align-items-center">    
+                            <i class="fas fa-grip-vertical float-left ml-1"></i>
+                            <div class="pl-3 flex-grow-1">
+                                <a href="#"><strong>Final</strong></a><br> Mutiple Modules</a> ! Not avalable yet
+                                <i class="fas fa-ellipsis-v float-right"></i>
+                                <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
+                            </div>
                         </li>
                         </div>
                     </ul>
@@ -421,16 +466,20 @@
                     </div>
                     <ul class="list-group work_list">
                         <li class="list-group-item-dark p-3">
+                            <i class="fas fa-grip-vertical float-left mr-2"></i>
                            <strong>Projects</strong>
                             <i class="fa fa-ellipsis-v float-right ml-3"></i>
                             <i class="fa fa-plus float-right ml-2" style="color: gray"></i>
                             <div class="percent_total float-right">30% of Total</div>
                         </li>
                         <div class="assignment-border">
-                        <li class="list-group-item">
-                            <a href="#"><strong>Project</strong><br> Mutiple Modules</a> ! Not avalable yet
-                            <i class="fas fa-ellipsis-v float-right"></i>
-                            <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-grip-vertical float-left ml-1"></i>
+                            <div class="pl-3 flex-grow-1">
+                                <a href="#"><strong>Project</strong><br> Mutiple Modules</a> ! Not avalable yet
+                                <i class="fas fa-ellipsis-v float-right"></i>
+                                <i class="fas fa-check-circle float-right mr-3" style="color: #29c758"></i>
+                            </div>
                         </li>
                         </div>
                     </ul>
