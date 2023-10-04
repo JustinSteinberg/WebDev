@@ -647,6 +647,10 @@ th, td{
     height: 90%;
 }
 
+.list_padding li{
+    margin: 10px;
+}
+
 @media (max-width: 768px){
 
     .home-content{
