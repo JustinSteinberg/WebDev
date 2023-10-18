@@ -3,6 +3,9 @@ import { Navigate, Route, Routes, useParams, useLocation} from "react-router-dom
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
 import Home from "../../Kanbas/Home";
+import Assignments from "./Assignments";
+import AssignmentEditor from "./Assignments/AssignmentEditor";
+import Grades from "./Grades";
 
 function Courses() {
   const { courseId } = useParams();
@@ -14,15 +17,15 @@ function Courses() {
   return (
     <div>
       <div className="page_header">
-        <h3 class="page_header_home">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item">Course {course.name}</li>
-                <li class="breadcrumb-item active">{currentTab}</li>
+        <h3 className="page_header_home">
+            <ol className="breadcrumb">
+                <li className="breadcrumb-item">Course {course.name}</li>
+                <li className="breadcrumb-item active">{currentTab}</li>
             </ol>
-            </h3>
+        </h3>
       </div>
       <div className="sub-content">
-      <CourseNavigation />
+        <CourseNavigation />
       </div>
       <div>
         <div
@@ -36,12 +39,12 @@ function Courses() {
             <Route path="/" element={<Navigate to="Home" />} />
             <Route path="Home" element={<Home/>} />
             <Route path="Modules" element={<Modules/>} />
-            <Route path="Assignments" element={<h1>Assignments</h1>} />
+            <Route path="Assignments" element={<Assignments/>} />
             <Route
               path="Assignments/:assignmentId"
-              element={<h1>Assignment Editor</h1>}
+              element={<AssignmentEditor/>}
             />
-            <Route path="Grades" element={<h1>Grades</h1>} />
+            <Route path="Grades" element={<Grades />} />
           </Routes>
         </div>
       </div>

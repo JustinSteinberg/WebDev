@@ -603,13 +603,13 @@ th, td{
 }
 
 .breadcrumb-item + .breadcrumb-item::before{
-    content: ">";
+    content: ">" !important;
 }
 
 .work_list{
     list-style: none;
     width: 100%;
-    padding-top: 20px;
+    /*padding-top: 20px;*/
 }
 
 .work_list a{
