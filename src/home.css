@@ -1,0 +1,700 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    line-height: 1;
+}
+
+.assignment_list{
+    margin: 20px;
+}
+
+.assignment_list ul{
+    margin-left: 20px;
+}
+
+
+.my_container{
+    display: inline;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+nav{
+    display: flex;
+    width: 100px;
+    height: 100%;
+    justify-content: center;
+    align-self: flex-start;
+    position: fixed;
+}
+
+nav i{
+    margin: 20px;
+}
+
+.nav-one{
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    z-index: 10;
+}
+
+.nav-one ul{
+    list-style: none;
+    text-align: center;
+}
+
+.nav-one li{
+    padding: 7px;
+}
+
+.nav-one a{
+    text-decoration: none;
+    color: white
+}
+
+.kanbas-nav{
+    background-color: black;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.second-nav{
+    margin-top: 35px;
+    /*flex: 2 1 0;*/
+    display: flex;
+    /*justify-content: center;*/
+}
+
+.second-nav ul{
+    list-style: none;
+}
+
+.second-nav li{
+    padding: 7px 10px;
+    margin: 5px 0px;
+}
+.second-nav a{
+    text-decoration: none;
+    color: black;
+}
+
+.front_page{
+    justify-content: flex-start;
+}
+
+.webdev{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.content, .home-content{
+    display: flex;
+   /* flex: 1; */
+    padding: 10px;
+    margin: 10px;
+   /* align-items: center; */
+    flex-direction: column;
+    width: 100%;
+    margin-left: 110px;
+}
+
+.dash-content{
+    display: flex;
+   /* flex: 1; */
+    padding: 10px;
+    margin: 10px;
+   /* align-items: center; */
+    flex-direction: column;
+    width: 100%;
+}
+
+.sub-content{
+    display: flex;
+    width: 100%;
+}
+
+.my_dashboard{
+    position: fixed;
+    z-index: 3;
+    width: 100px;
+}
+
+.dash-board-content{
+    display: flex;
+    flex: 1;
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 110px;
+}
+
+.dash-board-content h1{
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+.class_card{
+    width: 250px;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 20px 10px;
+    align-self: center;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    overflow-y: hidden;
+}
+
+.class_card:hover{
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.9);
+}
+
+.webdev a{
+    text-decoration: none;
+}
+
+
+.card-color{
+    width: 100%;
+    height: 50%;
+    background-color: lightblue;
+    border-radius: 5px 5px 0 0;
+}
+
+.card-description{
+    color: lightblue;
+    background-color: white;
+    padding: 5px;
+    border-top: 1px solid black;
+}
+
+.card-description p {
+    margin: 0px 5px;
+}
+
+.originalPos{
+    transform: translateX(0);
+}
+
+.movedPos{
+    transform: translateX(300px);
+}
+
+.courses-nav, .account-nav{
+    position: fixed;
+    left: -200px;
+    transition: 0.3s ease;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    z-index: 2;
+}
+
+.courses-nav ul, .account-nav ul{
+    list-style: none;
+}
+
+.courses-nav li, .courses-nav h2, .account-nav li, .account-nav h2{
+    padding: 7px;
+}
+
+.courses-nav h2{
+    margin: 7px;
+    border-bottom: 1px solid gray;
+}
+
+.courses-nav a, .account-nav a{
+    text-decoration: none;
+    color: red;
+}
+
+
+#buttons{
+   /* margin-bottom: 10px;*/
+   display: flex;
+}
+
+#buttons li{
+    display: inline;
+    list-style-type: none;
+    margin: 1px;
+}
+
+#buttons button, #buttons select{
+    padding: 5px;
+}
+
+ul ul li{
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+aside{
+    width: 25%;
+    justify-self: flex-end;
+}
+
+.home_side{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.butts{
+    margin: 10px 0 10px 0;
+}
+
+.side{
+    margin: 10px; 
+    border-radius: 50px;
+}
+
+.side li{
+    border: 3px solid white;
+    border-radius: 10px !important;
+    text-align: left;
+}
+
+.side a{
+    color: black;
+    text-decoration: none;
+}
+
+.coming_up{
+    border-bottom: 1px solid black;
+    text-align: left;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.calendar{
+    margin: 20px 0px;
+}
+
+h2{
+    margin: 20px 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+label{
+    font-weight: bold;
+}
+
+form input, form textarea, form select{
+    margin: 10px 0;
+}
+
+.apply_filter{
+    width: fit-content;
+}
+
+/* Table is for grade.html */
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+tr{
+    border-bottom: 1px solid black;
+}
+
+#entry{
+    padding: 5px 2px;
+    text-align: center;
+    width: 80%;
+}
+
+th, td{
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+} 
+
+.inputs_names{
+    width: 100%;
+}
+
+.input_name, .input_assignment{
+    width: 50%;
+}
+
+.assignments_border{
+    border-top: 1px solid black;
+    margin-top: 10px;
+}
+
+.assignments ul{
+    list-style: none;
+}
+
+.assignments a{
+    text-decoration: none;
+}
+
+
+#assignments, #quizzes, #exams, #projects{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.assignment-border{
+    border-left: 5px solid green;
+}
+
+.edit_assignment{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.edit_work{
+    display: inline-flex;
+}
+
+.edit_work select{
+    margin: 10px 10px;
+    height: 40px;
+}
+
+.edit_submit{
+    display: inline-flex;
+    justify-content: end;
+}
+
+
+.edit_submit button{
+   margin-left: 5px;
+   margin-top: 5px;
+   padding: 2px;
+   width: 100px;
+}
+
+/*
+.profile_content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr 1fr;
+}*/
+
+.profile_content{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 40px;
+    flex: 1;
+}
+
+.profile_content > ul{
+    list-style: none;
+}
+
+.page_header{
+    border-bottom: 1px solid gray;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.profile_img{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 1px solid black;
+    justify-self: flex-start;
+    margin: 20px 10px 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 62px;
+}
+
+.profile_info{
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    margin: 0px 10px;
+    padding-left: 10px;
+}
+
+.edit_butt{
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    height: 40px;
+    margin: 20px 20px;
+}
+
+.link_labels{
+    margin: 20px 0px 0 0px;
+}
+
+.link_labels label{
+    margin: 20px 125px 20px 65px;
+    text-align: center;
+}
+
+.links{
+    display: block;
+}
+
+.add_link{
+    width: fit-content;
+    padding: 2px;
+}
+
+.profile_buttons{
+    margin: 20px 0px;
+    display: flex;
+    justify-content: end;
+}
+.profile_buttons button{
+    margin: 5px;
+    height: 50px;
+}
+
+.profile_buttons button:last-child{
+    color: white;
+    background-color: red;
+}
+
+.edit_profile input, .edit_profile select{
+    padding: 4px;
+   /* width: 50%;*/
+}
+
+.edit_profile textarea{
+    padding: 0 0 50px 0px;
+   /* width: 50%;*/
+    text-align: start;
+}
+
+.cancel_button{
+    flex: 0.5;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submission_type{
+    border: 1px solid black;
+    align-self: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.settings_nav{
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.settings_nav a{
+    text-decoration: none;
+    color: black;
+}
+
+.settings_nav li{
+    display: inline;
+    padding: 8px;
+    margin-right: 15px;
+}
+
+.form_group{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.course_details label{
+    margin: 10px 10px 10px 0px;
+}
+
+.course_details p{
+    margin: 0px 10px 10px 0px;
+}
+
+.course_details button{
+    align-self: end;
+    background-color: red;
+    color: white;
+    width: 200px;
+    height: 50px;
+}
+
+.course_nav td{
+    border: none;
+    text-align: left;
+    padding: 10px;
+}
+
+.course_nav{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 50%;
+
+}
+.course_nav tr{
+    border: 1px solid black;
+}
+
+.save{
+    background-color: red;
+    color: white;
+    width: 200px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+#back_to_assignments{
+    font-weight: bold;
+    color: red;
+    font-size: 14px;
+}
+
+.prof-circle{
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid gray;
+    color: blue;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.prof-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid gray;
+    margin: 5px 0px;
+    padding: 5px 0px;
+}
+
+.breadcrumb{
+    background-color: white;
+    margin: 0;
+}
+
+.breadcrumb-item + .breadcrumb-item::before{
+    content: ">";
+}
+
+.work_list{
+    list-style: none;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.work_list a{
+    text-decoration: none;
+    color: black;
+}
+
+.percent_total{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1px 5px 1px 5px;
+}
+
+.width_change{
+    width: 70%;
+    align-self: flex-start;
+}
+
+.edit_labels{
+    display: inline;
+    text-align: right;
+    flex: 3;
+}
+
+.edit_inputs{
+    flex: 5;
+}
+
+.settings_inputs{
+    display: inline;
+    margin: 10px 0 10px 0;
+    text-align: left;
+}
+
+.assignment-border .list-group-item{
+    padding-left: 5px;
+}
+
+.small_nav{
+    display: none;
+}
+
+.page_header_home{
+    display: inline;
+}
+
+.NU_logo{
+    width: 90%;
+    height: 90%;
+}
+
+.list_padding li{
+    margin: 10px;
+}
+
+@media (max-width: 768px){
+
+    .home-content{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .page_header_home{
+        display: none;
+    }
+
+    .small_nav{
+        display: inline;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        color: white;
+        background-color: black;
+        text-align: center;
+        padding: 5px;
+        z-index: 11;
+    }
+
+    .menu{
+        justify-self: flex-start;
+    }
+
+    .menu_2{
+        justify-self: flex-end;
+        align-self: center;
+    }
+
+}
