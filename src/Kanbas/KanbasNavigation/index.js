@@ -67,7 +67,7 @@ function KanbasNavigation() {
           ))}
           <li>
             <Link
-              to="../index.html"
+              to="../../public/kanbas/assignments/index.html"
               id="back_to_assignments"
               className="dashboard-link"
             >
