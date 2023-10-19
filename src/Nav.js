@@ -3,7 +3,7 @@ function Nav() {
   const { pathname } = useLocation();
   const tabClass = {    
     display: "inline-flex",
-    width: "20%",
+    width: "50%",
     height: "42px",
     position: "absolute",
     right: 0,
