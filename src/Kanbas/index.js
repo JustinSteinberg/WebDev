@@ -9,7 +9,6 @@ import Courses from "./Courses";
 function Kanbas() {
     return (
       <div className="d-flex">
-        <Nav/>
         <div>
           <KanbasNavigation/>
         </div>
