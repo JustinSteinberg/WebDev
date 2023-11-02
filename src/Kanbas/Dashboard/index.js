@@ -1,11 +1,35 @@
-import React from 'react';
+import {React, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import db from '../Database';
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
 
-function Dashboard() {
-  const courses = db.courses;
+function Dashboard({ courses, course, setCourse, addNewCourse,
+  deleteCourse, updateCourse }
+) {
+  //const courses = db.courses;
+  /*const [courses, setCourses] = useState(db.courses);
+  
+  const [course, setCourse] = useState({
+    name: "New Course",      number: "New Number",
+    startDate: "2023-09-10", endDate: "2023-12-15",
+  });
+
+  const addNewCourse = () => {
+    setCourses([...courses,
+              { ...course,
+                _id: new Date().getTime() % 100000}]);
+  };
+  const deleteCourse = (courseId) => {
+    setCourses(courses.filter((course) => course._id !== courseId));
+  };
+
+  const updateCourse = (thisCourse) => {
+    const newCourse = courses.map((item) =>
+      (item._id === course._id ? thisCourse : item));
+    setCourses(newCourse);
+  }
+*/
 
   return (
     <main className="dash-board-content"
@@ -51,6 +75,44 @@ function Dashboard() {
             ))}
           </div>
         </div>
+        <h5>Course</h5>
+        <input value={course.name} className="form-control"  onChange={(e) => setCourse({ ...course, name: e.target.value }) }  />
+        <input value={course.number} className="form-control" onChange={(e) => setCourse({ ...course, number: e.target.value }) } />
+        <input value={course.startDate} className="form-control" type="date"  onChange={(e) => setCourse({ ...course, startDate: e.target.value }) }/>
+        <input value={course.endDate} className="form-control" type="date" onChange={(e) => setCourse({ ...course, endDate: e.target.value }) }/>
+        <div className="list-group">
+          <li className="list-group-item">
+          <input
+              value=""
+              onChange />
+            <div className="float-end">
+              <button className='btn btn-success m-1' onClick={addNewCourse}>Add</button>
+              <button className='btn btn-info m-1' onClick={()=> updateCourse(course)}>
+                Update </button>
+            </div>
+          </li>
+        {courses.map((course) => (
+          <Link key={course._id}
+                to={`/Kanbas/Courses/${course._id}`}
+                className="list-group-item">
+            {course.name}
+            <div className='float-end'>
+              <button className='btn btn-danger m-1' onClick={(event) => {
+                event.preventDefault();
+                deleteCourse(course._id);
+              }}
+>
+                Delete </button>
+              <button className='btn btn-primary m-1' onClick={(event) => {
+                event.preventDefault();
+                setCourse(course);
+              }}>
+                Edit </button>
+            </div>
+          </Link>
+        ))}
+      </div>
+
       </div>
     </main>
   );
