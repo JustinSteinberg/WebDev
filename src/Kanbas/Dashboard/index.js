@@ -34,6 +34,7 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
   return (
     <main className="dash-board-content"
     style={{margin: 0}}>
+      <div style={{display: "flex"}}>
       <div className="webdev">
         <h1>Dashboard</h1>
         <p>This is the front page of canvas.</p>
@@ -43,7 +44,7 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
               <div
                 key={course._id}
                 className="col-xl-3 col-lg-4 col-md-6 d-flex justify-content-center"
-                style={{margin: "0 10px"}}
+                style={{margin: "0 25px"}}
               >
                 <Link to={`/Kanbas/Courses/${course._id}`}>
                   <div className="class_card">
@@ -73,46 +74,46 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
                 </Link>
               </div>
             ))}
+          
           </div>
         </div>
-        <h5>Course</h5>
-        <input value={course.name} className="form-control"  onChange={(e) => setCourse({ ...course, name: e.target.value }) }  />
-        <input value={course.number} className="form-control" onChange={(e) => setCourse({ ...course, number: e.target.value }) } />
-        <input value={course.startDate} className="form-control" type="date"  onChange={(e) => setCourse({ ...course, startDate: e.target.value }) }/>
-        <input value={course.endDate} className="form-control" type="date" onChange={(e) => setCourse({ ...course, endDate: e.target.value }) }/>
-        <div className="list-group">
-          <li className="list-group-item">
-          <input
-              value=""
-              onChange />
-            <div className="float-end">
-              <button className='btn btn-success m-1' onClick={addNewCourse}>Add</button>
-              <button className='btn btn-info m-1' onClick={()=> updateCourse(course)}>
-                Update </button>
-            </div>
-          </li>
-        {courses.map((course) => (
-          <Link key={course._id}
-                to={`/Kanbas/Courses/${course._id}`}
-                className="list-group-item">
-            {course.name}
-            <div className='float-end'>
-              <button className='btn btn-danger m-1' onClick={(event) => {
-                event.preventDefault();
-                deleteCourse(course._id);
-              }}
->
-                Delete </button>
-              <button className='btn btn-primary m-1' onClick={(event) => {
-                event.preventDefault();
-                setCourse(course);
-              }}>
-                Edit </button>
-            </div>
-          </Link>
-        ))}
       </div>
-
+      <div style={{marginTop: "60px"}}>
+          <h5>Course</h5>
+          <div className="float-end">
+                <button className='btn btn-success m-1' onClick={addNewCourse}>Add</button>
+                <button className='btn btn-info m-1' onClick={()=> updateCourse(course)}>
+                  Update </button>
+          </div>
+          <input value={course.name} className="form-control"  onChange={(e) => setCourse({ ...course, name: e.target.value }) }  />
+          <input value={course.number} className="form-control" onChange={(e) => setCourse({ ...course, number: e.target.value }) } />
+          <input value={course.startDate} className="form-control" type="date"  onChange={(e) => setCourse({ ...course, startDate: e.target.value }) }/>
+          <input value={course.endDate} className="form-control" type="date" onChange={(e) => setCourse({ ...course, endDate: e.target.value }) }/>
+          <div className="list-group">
+            <li className="list-group-item">
+            </li>
+          {courses.map((course) => (
+            <Link key={course._id}
+                  to={`/Kanbas/Courses/${course._id}`}
+                  className="list-group-item">
+              {course.name}
+              <div className='float-end'>
+                <button className='btn btn-danger m-1' onClick={(event) => {
+                  event.preventDefault();
+                  deleteCourse(course._id);
+                }}
+  >
+                  Delete </button>
+                <button className='btn btn-primary m-1' onClick={(event) => {
+                  event.preventDefault();
+                  setCourse(course);
+                }}>
+                  Edit </button>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
       </div>
     </main>
   );
