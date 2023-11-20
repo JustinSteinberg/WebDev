@@ -1,7 +1,6 @@
 import {React, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import db from '../Database';
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
 
 function Dashboard({ courses, course, setCourse, addNewCourse,
@@ -100,7 +99,7 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
               <div className='float-end'>
                 <button className='btn btn-danger m-1' onClick={(event) => {
                   event.preventDefault();
-                  deleteCourse(course._id);
+                  deleteCourse(course);
                 }}
   >
                   Delete </button>
