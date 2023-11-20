@@ -1,13 +1,39 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { addModule, deleteModule, updateModule, setModule } from "./modulesReducer";
+import { addModule, deleteModule, updateModule, setModule, setModules } from "./modulesReducer";
+import { findModulesForCourse, createModule, deleteMod, updateMod} from "./client";
 
 function ModuleList() {
   const { courseId } = useParams();
   const modules = useSelector((state) => state.modulesReducer.modules);
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    findModulesForCourse(courseId)
+      .then((modules) =>
+        dispatch(setModules(modules))
+    );
+  }, [courseId]);
+
+  const handleAddModule = () =>{
+    createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+
+  const handleDeleteModule = (moduleId) => {
+    deleteMod(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
+  const handleUpdateModule = async () => {
+    const status = await updateMod(module);
+    dispatch(updateModule(module));
+  };
+
 
   const flexStyle = {display: "flex", flexDirection: "column", justifySelf: "center", width: "100%"};
 
@@ -16,8 +42,8 @@ function ModuleList() {
      <ul className="list-group mb-3 mr-3"
             style={{marginRight: 15}}>
                     <li className="list-group-item">
-        <button className="btn btn-success m-1" onClick={() => dispatch(addModule({...module, course: courseId})) }>Add</button>
-        <button className="btn btn-info m-1" onClick={() => dispatch(updateModule(module))}> Update </button>
+        <button className="btn btn-success m-1" onClick={() => handleAddModule()}>Add</button>
+        <button className="btn btn-info m-1" onClick={() => handleUpdateModule(module)}> Update </button>
 
         <input className="form-control" value={module.name}
           onChange={(e) => dispatch(setModule({
@@ -40,7 +66,7 @@ function ModuleList() {
                   <p>{module.description}</p>
               </div>
                 <button className="btn btn-danger float-end" style={{height: "50%", marginRight: 5}}
-                onClick={() => dispatch(deleteModule(module._id))}>
+                onClick={() => handleDeleteModule(module._id)}>
                 Delete
               </button>
               <button className="btn btn-success float-end" style={{height: "50%"}}
