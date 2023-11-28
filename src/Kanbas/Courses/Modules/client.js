@@ -5,7 +5,7 @@ import axios from "axios";
 const API_BASE = process.env.REACT_APP_API_BASE;
 const MODULES_URL = `${API_BASE}/api/modules`;
 const COURSES_URL = `${API_BASE}/api/courses`;
-console.log(`${API_BASE}`);
+console.log(`API BASE: ${API_BASE}`);
 
 export const updateMod = async (module) => {
     const response = await axios.
