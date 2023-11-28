@@ -13,7 +13,7 @@ function Assignment5() {
       <div>
         <h1>Assignment 5</h1>
         <div className="list-group">
-          <a href={`${URL}/a5/welcome`}
+          <a href={`${URL}/welcome`}
              className="list-group-item">
             Welcome
           </a>
