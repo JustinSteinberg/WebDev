@@ -8,6 +8,10 @@ import store from "./store";
 import { Provider } from "react-redux";
 import axios from "axios";
 import { findNonSerializableValue } from "@reduxjs/toolkit";
+import Account from "./users/account";
+import Signin from "./users/signin";
+import UserTable from "./users/table";
+import Signup from "./users/signup";
 
 function Kanbas() {
 
@@ -91,7 +95,10 @@ function Kanbas() {
           <div className="home-content">
               <Routes>
                   <Route path="/" element={<Navigate to="Dashboard" />} />
-                  <Route path="Account" element={<h1>Account</h1>} />
+                  <Route path="/Account" element={<Account />} />
+                  <Route path="/signin" element={<Signin />} />
+                  <Route path="/signup" element={<Signup/>} />
+                  <Route path="/users" element={<UserTable/>}/>
                   <Route path="Dashboard" element={    
                   <Dashboard
                   courses={courses}

@@ -13,8 +13,8 @@ function KanbasNavigation() {
     { label: "Inbox", to: "/Kanbas/Inbox" },
     { label: "History", to: "/Kanbas/History" },
     { label: "Studio", to: "/Kanbas/Studio" },
-    { label: "Commons", to: "/Kanbas/Commons" },
-    { label: "Help", to: "/Kanbas/Help" },
+    { label: "SignUp", to: "/Kanbas/signup" },
+    { label: "SignIn", to: "/Kanbas/signin" },
   ];
 
   //Corresponding icons to links
@@ -26,8 +26,8 @@ function KanbasNavigation() {
     Inbox: faInbox,
     History: faClock,
     Studio: faFilm,
-    Commons: faCircleArrowRight,
-    Help: faQuestionCircle,
+    SignUp: faCircleArrowRight,
+    SignIn: faQuestionCircle,
   };
 
   const { pathname } = useLocation();
